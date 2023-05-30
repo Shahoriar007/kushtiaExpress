@@ -19,7 +19,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// Home
+Route::get('/', [HomeController::class, 'home'])->name('homepage');
+// Contact us
+Route::get('/contact', [HomeController::class, 'contact'])->name('contactus');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
