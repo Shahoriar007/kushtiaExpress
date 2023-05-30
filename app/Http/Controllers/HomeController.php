@@ -15,4 +15,9 @@ class HomeController extends Controller
     {
         return view('userSide.contact');
     }
+
+    public function about()
+    {
+        return view('userSide.about');
+    }
 }

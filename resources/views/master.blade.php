@@ -267,7 +267,7 @@
                                     <li>
                                         <a href="{{ route('homepage') }}" class="active">Home </i></a>
                                     </li>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                     <li><a href="shop.html">Products</a></li>
                                     <li><a href="{{ route('contactus') }}">Contact Us</a></li>                                   
                                 </ul>
