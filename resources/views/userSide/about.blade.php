@@ -1,4 +1,4 @@
-@extends('master')
+@extends('userSide.master')
 
 @section('title')
 <title>About</title>
