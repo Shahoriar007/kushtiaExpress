@@ -15,8 +15,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontendAdmin/assets/img/favicon.png') }}">
 
     <!-- <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap.min.css') }}"> -->
-   
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/bootstrap-datetimepicker.min.css') }}">
 
@@ -33,7 +34,7 @@
     <!--new add-->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontendAdmin/assets/css/jquery.dataTables.css') }}">
 
-    
+
 
 </head>
 
@@ -75,20 +76,22 @@
                         <a href="javascript:void(0);" class="responsive-search">
                             <i class="fa fa-search"></i>
                         </a>
-                        
+
                     </div>
                 </li>
-     
+
 
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-                        <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
+                        <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}"
+                                alt="">
                             <span class="status online"></span></span>
                     </a>
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">
-                                <span class="user-img"><img src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
+                                <span class="user-img"><img
+                                        src="{{ asset('frontendAdmin/assets/img/profiles/avator1.jpg') }}" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
                                     <h6>John Doe</h6>
@@ -101,8 +104,20 @@
                             <a class="dropdown-item" href="generalsettings.html"><i class="me-2"
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item logout pb-0" href="signin.html"><img
-                                    src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img">Logout</a>
+                            
+
+                            <a class="dropdown-item logout pb-0" href="{{ route('logout') }}"
+                                src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img"
+
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{ __('Log Out') }}
+                            </a>
+
+                            <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                                @csrf
+                            </form>
+
+
                         </div>
                     </div>
                 </li>
@@ -127,39 +142,43 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="index.html"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}" alt="img"><span>
+                            <a href="index.html"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}"
+                                    alt="img"><span>
                                     Dashboard</span> </a>
                         </li>
 
                         <li class="submenu">
-                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
                                     Courses Category</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="">Cagtegory List</a></li>
-                               
+
                             </ul>
                         </li>
 
                         <li class="submenu">
-                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
                                     Courses</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="">Courses List</a></li>
-                               
+
                             </ul>
                         </li>
 
                         <li class="submenu">
-                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}" alt="img"><span>
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
                                     Appointments</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="">Take Appointments</a></li>
-                               
+
                             </ul>
                         </li>
 
 
-                        
+
                     </ul>
                 </div>
             </div>
@@ -170,7 +189,7 @@
 
     </div>
 
-    
+
     <script src="{{ asset('frontendAdmin/assets/js/jquery-3.6.0.min.js') }}"></script>
 
     <script src="{{ asset('frontendAdmin/assets/js/feather.min.js') }}"></script>
@@ -191,15 +210,15 @@
     <script src="{{ asset('frontendAdmin/assets/plugins/sweetalert/sweetalerts.min.js') }}"></script>
 
     <script src="{{ asset('frontendAdmin/assets/js/script.js') }}"></script>
-     <!--new add-->
+    <!--new add-->
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
 
     <!-- CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
 
-   
-     
-    
+
+
+
 </body>
 
 </html>
