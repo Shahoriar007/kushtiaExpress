@@ -269,7 +269,8 @@
                                     </li>
                                     <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                     <li><a href="shop.html">Products</a></li>
-                                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>                                   
+                                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>  
+                                    <li><a href="{{ route('login') }}">Login</a></li>                                   
                                 </ul>
                             </nav>
                         </div>

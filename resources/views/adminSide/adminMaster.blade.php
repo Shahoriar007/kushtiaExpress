@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="{{ asset('frontendAdmin/assets/css/style.css') }}">
     <!--new add-->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontendAdmin/assets/css/jquery.dataTables.css') }}">
+    <!--ck editor-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 
 
 
@@ -142,7 +145,7 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li>
-                            <a href="index.html"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}"
+                            <a href="{{ route('dashboard') }}"><img src="{{ asset('frontendAdmin/assets/img/icons/dashboard.svg') }}"
                                     alt="img"><span>
                                     Dashboard</span> </a>
                         </li>
@@ -150,9 +153,10 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    Courses Category</span> <span class="menu-arrow"></span></a>
+                                    CMS</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="">Cagtegory List</a></li>
+                                <li><a href="{{ route('headerSlider') }}">Header Slider</a></li>
+                                <li><a href="">Customer Review</a></li>
 
                             </ul>
                         </li>
@@ -160,9 +164,9 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    Courses</span> <span class="menu-arrow"></span></a>
+                                    Accessories</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="">Courses List</a></li>
+                                <li><a href="{{ route('accessories') }}">Add Accessories</a></li>
 
                             </ul>
                         </li>
@@ -170,9 +174,9 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    Appointments</span> <span class="menu-arrow"></span></a>
+                                    Products</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="">Take Appointments</a></li>
+                                <li><a href="{{ route('products') }}">Add Products</a></li>
 
                             </ul>
                         </li>
@@ -214,7 +218,8 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
 
     <!-- CK editor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
 
 
 

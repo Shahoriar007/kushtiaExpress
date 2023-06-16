@@ -2,7 +2,13 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HeaderSliderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AccessoriesController;
+use App\Http\Controllers\ProductsController;
+
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +40,16 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contactus');
 
 // Admin side starts 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'adminHome'])->name('adminHomePage');
+    // Dashboard
+    Route::get('/dashboard', [AdminController::class, 'adminHome'])->name('dashboard');
+    // Header Slider
+    Route::get('/headerSlider', [HeaderSliderController::class, 'headerSlider'])->name('headerSlider');
+        // Add accessories
+    Route::get('/accessories', [AccessoriesController::class, 'accessories'])->name('accessories');
+        // Add Products
+    Route::get('/products', [ProductsController::class, 'products'])->name('products');
+
+
 });
 
 // Admin side ends
