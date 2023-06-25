@@ -38,6 +38,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('aboutus');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contactus');
 // User side ends
 
+
 // Admin side starts 
 Route::middleware('auth')->group(function () {
     // Dashboard
@@ -45,7 +46,9 @@ Route::middleware('auth')->group(function () {
     // Header Slider
     Route::get('/headerSlider', [HeaderSliderController::class, 'headerSlider'])->name('headerSlider');
         // Add accessories
-    Route::get('/accessories', [AccessoriesController::class, 'accessories'])->name('accessories');
+    Route::resource('accessories', AccessoriesController::class);
+    
+
         // Add Products
     Route::get('/products', [ProductsController::class, 'products'])->name('products');
 
