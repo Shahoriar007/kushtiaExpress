@@ -166,7 +166,8 @@
                                     alt="img"><span>
                                     Accessories</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="{{ route('accessories') }}">Add Accessories</a></li>
+                                <li><a href="{{ route('accessories.index') }}">All Accessories</a></li>
+                                <li><a href="{{ route('accessories.create') }}">Add Accessories</a></li>
 
                             </ul>
                         </li>
@@ -220,7 +221,7 @@
     <!-- CK editor -->
     <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
-
+    @yield('ckeditor')
 
 
 
