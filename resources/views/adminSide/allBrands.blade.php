@@ -1,7 +1,7 @@
 @extends('adminSide.adminMaster')
 
 @section('adminTitle')
-<title>All Accessories</title>
+<title>All Brands</title>
 @endsection
 
 @section('adminContent')
@@ -10,13 +10,13 @@
         <div class="content">
             <div class="page-header">
                 <div class="page-title">
-                    <h4>Accessories List</h4>
-                    <h6>Manage your Accessories</h6>
+                    <h4>Brands List</h4>
+                    <h6>Manage your Brands</h6>
                 </div>
 
                 <div class="page-btn">
 
-                <a href="{{ route('accessories.create') }}" class="btn btn-added"><img src="{{asset('frontendAdmin/assets/img/icons/plus.svg')}}" alt="img">Add Accessories</a>
+                <a href="{{ route('addBrand') }}" class="btn btn-added"><img src="{{asset('frontendAdmin/assets/img/icons/plus.svg')}}" alt="img">Add Brands</a>
 
                 </div>
             </div>
@@ -43,29 +43,10 @@
                             <div class="row">
                                 <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Enter Supplier Code">
+                                        <input type="text" placeholder="Enter Brands Name">
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter Supplier">
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter Phone">
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter Email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-1 col-sm-6 col-12 ms-auto">
-                                    <div class="form-group">
-                                        <a class="btn btn-filters ms-auto"><img src="{{asset('frontendAdmin/assets/img/icons/search-whites.svg')}}" alt="img"></a>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -81,14 +62,13 @@
                                         </label>
                                     </th>
                                     <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Availability</th>
+
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @foreach ($accessoryItems as $item)
+                                @foreach ($brandItems as $item)
 
                                     <tr>
 
@@ -99,9 +79,8 @@
                                             </label>
                                         </td>
                                         {{-- <td class="productimgname">a</td> --}}
-                                        <td><a href="#">{{ $item->name }}</a></td>
-                                        <td>{{ $item->price }}</td>
-                                        <td>{{ $item->availability }}</td>
+                                        <td><a href="#">{{ $item->brandName }}</a></td>
+
 
                                         <td>
                                             <!-- Button trigger modal -->
@@ -113,25 +92,21 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="update_supplier_lebel">Update Supplier</h5>
+                                                            <h5 class="modal-title" id="update_supplier_lebel">Update Brand </h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
 
-                                                        <form method="POST" action="" class="d-flex">
 
-                                                        <form method="POST" action="" class="d-flex">
+                                                        <form method="POST" action="{{ route('updateBrand') }}" class="d-flex">
 
                                                         @csrf
                                                                 <div class="p-1">
-                                                                    <input type="hidden" id="update_supplierId" name="update_supplierId" value="">
+                                                                    <input type="hidden" id="update_brandId" name="update_brandId" value="{{ $item->id }}">
                                                                     <input type="text" id="update_name" name="update_name" value=""><br><br>
-                                                                    <input type="email" id="update_email" name="update_email" value=""><br><br>
-                                                                    <input type="text" id="update_phone" name="update_phone" value=""><br><br>
-                                                                    <input type="text" id="update_address" name="update_address" value=""><br><br>
-                                                                    <input type="text" id="update_company" name="update_company" value=""><br><br>
+
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -146,14 +121,14 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Modal -->
-
-                                            <form action="{{ route('accessories.destroy', $item->id) }}" method="post">
+                                            <form action="{{ route('destroyBrand', $item->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
 
                                                 <button type="submit" class="btn btn-danger btn-delete-supplier"><img src="{{asset('frontendAdmin/assets/img/icons/delete.svg')}}" alt="img"></button>
                                             </form>
+
+
                                         </td>
 
                                     </tr>

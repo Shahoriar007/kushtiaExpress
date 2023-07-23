@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-body">
 
-                        <form method="POST" action="{{ route('accessories.store') }}">
+                        <form method="POST" action="{{ route('accessories.store') }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group mb-0 row">
@@ -44,16 +44,16 @@
 
                                     </div>
                                 </div>
-                                <!-- <div class="form-group mb-0 row">
-
+                                <div class="form-group mb-0 row">
                                     <label class="col-form-label col-md-2">Input Accessory Photos</label>
                                     <div class="col-md-10">
                                         <div class="input-group mb-3">
-                                            <input type="file" name="photos[]" id="photo" class="form-control"
-                                                placeholder="upload photo" aria-label="photo" multiple>
+                                            <input type="file" name="photo1" id="photo1" class="form-control" accept="image/*" multiple>
+                                            <input type="file" name="photo2" id="photo2" class="form-control" accept="image/*" multiple>
+                                            <input type="file" name="photo3" id="photo3" class="form-control" accept="image/*" multiple>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
 
 
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\AccessoryProduct;
+use App\Models\Photo;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class AccessoriesController extends Controller
 {
@@ -30,17 +32,23 @@ class AccessoriesController extends Controller
      */
     public function store(Request $request)
     {
+
+        // Validate the input
+
+
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string',
-
             'price' => 'required|numeric',
             'availability' => 'required|in:1,0',
             'description' => 'nullable|string',
             'bullet_point' => 'nullable|string',
+            'photo1' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'photo2' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'photo3' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
-         // Store the Accessories
+        // Store the Accessories
         $accessory = new AccessoryProduct();
         $accessory->name = $validatedData['name'];
         $accessory->price = $validatedData['price'];
@@ -50,6 +58,29 @@ class AccessoriesController extends Controller
 
         // Save the accessory
         $accessory->save();
+
+         // Save the images
+        $images = ['photo1', 'photo2', 'photo3'];
+        foreach ($images as $imageInput) {
+            if ($request->hasFile($imageInput)) {
+                $imageFile = $request->file($imageInput);
+                $filename = time() . '_' . $imageFile->getClientOriginalName();
+
+                // Resize and save the image using Image Intervention
+                $image = Image::make($imageFile);
+                $image->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+                $image->save(public_path('images/' . $filename));
+
+                // Save the photo record in the database with the associated accessory ID
+                $photo = new Photo();
+                $photo->accessory_products_id = $accessory->id;
+                $photo->image_path = 'images/' . $filename;
+                // Add any other photo details you may have, e.g., title, description, etc.
+                $photo->save();
+            }
+        }
 
         // Redirect or perform any other actions
         return redirect()->route('accessories.index')->with('success', 'Accessory created successfully!');

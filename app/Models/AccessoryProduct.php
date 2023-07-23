@@ -14,5 +14,6 @@ class AccessoryProduct extends Model
         'price',
         'availability',
         'description',
+        'bullet_point',
     ];
 }
