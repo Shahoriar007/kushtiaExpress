@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Products;
+use App\Models\Product;
+use App\Models\Brand;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -10,13 +12,13 @@ class ProductsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function products()
-    {
-        return view('adminSide.addProducts');
-    }
+
     public function index()
     {
-        //
+        $productItems = Product::latest()->get();
+
+
+        return view('adminSide.allProducts', compact('productItems'));
     }
 
     /**
@@ -24,7 +26,10 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        $brandItems = Brand::latest()->get();
+        $categoryItems = Category::latest()->get();
+
+        return view('adminSide.addProducts', compact('brandItems','categoryItems'));
     }
 
     /**

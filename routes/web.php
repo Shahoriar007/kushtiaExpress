@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductsController;
 
 
 
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,7 +53,7 @@ Route::middleware('auth')->group(function () {
 
 
         // Add Products
-    Route::get('/products', [ProductsController::class, 'products'])->name('products');
+    Route::resource('products', ProductsController::class);
 
 
 
@@ -90,6 +91,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/create/brand', [BrandController::class, 'store'])->name('createBrand');
     Route::delete('/brand/{id}', [BrandController::class, 'destroy'])->name('destroyBrand');
     Route::post('/update/brand', [BrandController::class, 'update'])->name('updateBrand');
+
+        //slider CRUD
+
+        Route::get('/all/slider', [SliderController::class, 'index'])->name('sliderView');
+        Route::get('/add/slider', [SliderController::class, 'create'])->name('addSlider');
+        Route::post('/create/slider', [SliderController::class, 'store'])->name('createSlider');
+        Route::delete('/slider/{id}', [SliderController::class, 'destroy'])->name('destroySlider');
+        Route::post('/update/slider', [SliderController::class, 'update'])->name('updateSlider');
 
 
 });

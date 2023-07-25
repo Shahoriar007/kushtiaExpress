@@ -203,7 +203,19 @@
                                     alt="img"><span>
                                     Products</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="{{ route('products') }}">Add Products</a></li>
+                                <li><a href="{{ route('products.index') }}">All Products</a></li>
+                                <li><a href="{{ route('products.create') }}">Add Products</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
+                                    Slider</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('sliderView') }}">All Slider</a></li>
+                                <li><a href="{{ route('addSlider') }}">Add Slider</a></li>
 
                             </ul>
                         </li>
