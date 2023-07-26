@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductsController;
 
 
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -99,6 +100,14 @@ Route::middleware('auth')->group(function () {
         Route::post('/create/slider', [SliderController::class, 'store'])->name('createSlider');
         Route::delete('/slider/{id}', [SliderController::class, 'destroy'])->name('destroySlider');
         Route::post('/update/slider', [SliderController::class, 'update'])->name('updateSlider');
+
+        //Review CRUD
+
+        Route::get('/all/review', [ReviewController::class, 'index'])->name('reviewView');
+        Route::get('/add/review', [ReviewController::class, 'create'])->name('addReview');
+        Route::post('/create/review', [ReviewController::class, 'store'])->name('createReview');
+        Route::delete('/review/{id}', [ReviewController::class, 'destroy'])->name('destroyReview');
+        Route::post('/update/review', [ReviewController::class, 'update'])->name('updateReview');
 
 
 });
