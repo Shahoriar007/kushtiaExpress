@@ -28,7 +28,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form method="POST" action="">
+                            <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="form-group mb-0 row">
@@ -44,11 +44,23 @@
                                 </div>
 
                                 <div class="form-group mb-0 row">
+                                    <label class="col-form-label col-md-2">Input Product Price</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+
+                                            <input type="number" name="price" id="price" class="form-control"
+                                                placeholder="price" aria-label="price" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group mb-0 row">
 
                                     <label class="col-form-label col-md-2">Select Category</label>
                                     <div class="col-md-10">
                                         <div class="input-group mb-3">
-                                            <select name="availibility" id="availibility">
+                                            <select name="category_id" id="category_id">
 
                                                 @foreach ($categoryItems as $item)
                                                 <option value="{{ $item->id }}">{{ $item->categoryName }}</option>
@@ -64,7 +76,7 @@
                                     <label class="col-form-label col-md-2">Select Brand Name</label>
                                     <div class="col-md-10">
                                         <div class="input-group mb-3">
-                                            <select name="availibility" id="availibility">
+                                            <select name="brand_id" id="brand_id">
                                                 @foreach ($brandItems as $item)
                                                 <option value="{{ $item->id }}">{{ $item->brandName }}</option>
                                                 @endforeach
@@ -92,16 +104,7 @@
                                     </div>
 
 
-                                    <div class="form-group mb-0 row">
-
-                                        <label class="col-form-label col-md-2">Input Product price</label>
-                                        <div class="col-md-10">
-                                            <div class="input-group mb-3">
-                                                <input type="text" name="price" id="price" class="form-control"
-                                                    placeholder="update price" aria-label="price" multiple>
-                                            </div>
-                                        </div>
-                                    </div>
+                              
 
 
                                     <div class="form-group mb-0 row">
@@ -144,7 +147,7 @@
                                         <label class="col-form-label col-md-2">Is New</label>
                                         <div class="col-md-10">
                                             <div class="input-group mb-3">
-                                                <select name="availibility" id="availibility">
+                                                <select name="is_new" id="is_new">
                                                     <option value="1">Yes</option>
                                                     <option value="0">No</option>
 
@@ -158,7 +161,7 @@
                                         <label class="col-form-label col-md-2">Pre Owned</label>
                                         <div class="col-md-10">
                                             <div class="input-group mb-3">
-                                                <select name="availibility" id="availibility">
+                                                <select name="pre_owned" id="pre_owned">
                                                     <option value="1">Yes</option>
                                                     <option value="0">No</option>
 
@@ -172,7 +175,7 @@
                                         <label class="col-form-label col-md-2">Top Featured</label>
                                         <div class="col-md-10">
                                             <div class="input-group mb-3">
-                                                <select name="availibility" id="availibility">
+                                                <select name="top_featured" id="top_featured">
                                                     <option value="1">Yes</option>
                                                     <option value="0">No</option>
 

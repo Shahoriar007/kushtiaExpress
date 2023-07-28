@@ -155,17 +155,6 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    CMS</span> <span class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="{{ route('headerSlider') }}">Header Slider</a></li>
-                                <li><a href="">Customer Review</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
-                                    alt="img"><span>
                                     Accessories</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('accessories.index') }}">All Accessories</a></li>
@@ -212,7 +201,7 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    Slider</span> <span class="menu-arrow"></span></a>
+                                    Slider CMS</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('sliderView') }}">All Sliders</a></li>
                                 <li><a href="{{ route('addSlider') }}">Add Slider</a></li>
@@ -223,7 +212,7 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    Review</span> <span class="menu-arrow"></span></a>
+                                    Review CMS</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('reviewView') }}">All Reviews</a></li>
                                 <li><a href="{{ route('addReview') }}">Add Review</a></li>

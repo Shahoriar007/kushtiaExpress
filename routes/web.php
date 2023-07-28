@@ -12,6 +12,7 @@ use App\Http\Controllers\ProductsController;
 
 
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,14 @@ Route::get('/', [HomeController::class, 'home'])->name('homepage');
 Route::get('/about', [HomeController::class, 'about'])->name('aboutus');
 // Contact us
 Route::get('/contact', [HomeController::class, 'contact'])->name('contactus');
+//shop page
+Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
+//details page
+Route::get('/accessory/details/{id}', [ProductsController::class, 'details'])->name('accessoryDetails');
+Route::get('/product/details/{id}', [ProductsController::class, 'details'])->name('productDetails');
+
+
+
 // User side ends
 
 
