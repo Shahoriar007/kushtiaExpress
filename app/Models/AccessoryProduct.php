@@ -14,5 +14,11 @@ class AccessoryProduct extends Model
         'price',
         'availability',
         'description',
+        'bullet_point',
     ];
+
+    public function photos(){
+        return $this->hasMany(Photo::class, 'accessory_products_id', 'id');
+
+    }
 }

@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontendAdmin/assets/css/jquery.dataTables.css') }}">
     <!--ck editor-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+
 
 
 
@@ -107,7 +109,7 @@
                             <a class="dropdown-item" href="generalsettings.html"><i class="me-2"
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
-                            
+
 
                             <a class="dropdown-item logout pb-0" href="{{ route('logout') }}"
                                 src="{{ asset('frontendAdmin/assets/img/icons/log-out.svg') }}" class="me-2" alt="img"
@@ -153,17 +155,6 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
-                                    CMS</span> <span class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="{{ route('headerSlider') }}">Header Slider</a></li>
-                                <li><a href="">Customer Review</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="submenu">
-                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
-                                    alt="img"><span>
                                     Accessories</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="{{ route('accessories.index') }}">All Accessories</a></li>
@@ -175,9 +166,56 @@
                         <li class="submenu">
                             <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
                                     alt="img"><span>
+                                    Category</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('categoryView') }}"> All Categories </a></li>
+
+                                <li><a href="{{ route('addCategory') }}">Create Category </a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
+                                     Brand</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('brandView') }}"> All Brands </a></li>
+
+                                <li><a href="{{ route('addBrand') }}">Create Brand </a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
                                     Products</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="{{ route('products') }}">Add Products</a></li>
+                                <li><a href="{{ route('products.index') }}">All Products</a></li>
+                                <li><a href="{{ route('products.create') }}">Add Products</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
+                                    Slider CMS</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('sliderView') }}">All Sliders</a></li>
+                                <li><a href="{{ route('addSlider') }}">Add Slider</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><img src="{{ asset('frontendAdmin/assets/img/icons/time.svg') }}"
+                                    alt="img"><span>
+                                    Review CMS</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{{ route('reviewView') }}">All Reviews</a></li>
+                                <li><a href="{{ route('addReview') }}">Add Review</a></li>
 
                             </ul>
                         </li>
@@ -220,6 +258,9 @@
 
     <!-- CK editor -->
     <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 
     @yield('ckeditor')
 

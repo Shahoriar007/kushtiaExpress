@@ -35,10 +35,10 @@
          </svg>
     </div>
       <!-- back to top end -->
-      
+
     <!-- header-start -->
     <header class="header d-blue-bg">
-     
+
         <div class="header-mid">
             <div class="container">
                 <div class="heade-mid-inner">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 d-none d-lg-block">
-                            <div class="header__search">
+                            {{-- <div class="header__search">
                                 <form action="#">
                                     <div class="header__search-box">
                                         <input class="search-input" type="text" placeholder="I'm shopping for...">
@@ -64,13 +64,13 @@
                                             <option>Top 10 Offers</option>
                                             <option>New Arrivals</option>
                                             <option>Phones &amp; Tablets</option>
-                                           
+
                                         </select>
                                     </div>
                                 </form>
-                            </div>
+                            </div> --}}
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
         <div class="header__bottom">
             <div class="container">
                 <div class="row g-0 align-items-center">
-                    <div class="col-lg-3">                        
+                    <div class="col-lg-3">
                         <div class="cat__menu-wrapper side-border d-none d-lg-block">
                             <div class="cat-toggle">
                                 <button type="button" class="cat-toggle-btn cat-toggle-btn-1"><i class="fal fa-bars"></i>All Categories</button>
@@ -268,15 +268,15 @@
                                         <a href="{{ route('homepage') }}" class="active">Home </i></a>
                                     </li>
                                     <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                                    <li><a href="shop.html">Products</a></li>
-                                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>  
-                                    <li><a href="{{ route('login') }}">Login</a></li>                                   
+                                    <li><a href="{{ route('shop') }}">Products</a></li>
+                                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
                                 </ul>
                             </nav>
                         </div>
                       </div>
                     </div>
-                  
+
                 </div>
             </div>
         </div>
@@ -290,7 +290,7 @@
         <div class="fotter-area d-dark-bg">
             <div class="footer__top pt-80 pb-15">
                 <div class="container">
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
                             <div class="footer__widget">
                                 <div class="footer__widget-title mb-20">
@@ -335,7 +335,7 @@
                             </div>
                                </div>
 
-                               
+
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                                 <div class="cta-item cta-item-d mb-30">
                                     <h5 class="cta-title">Follow Us</h5>
@@ -349,17 +349,22 @@
                                     </div>
                                 </div>
                             </div>
-                                
-                   
+
+
                     </div>
                 </div>
             </div>
-          
+
         </div>
     </footer>
     <!-- footer-end -->
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-   <script src="{{ ('frontendUser/assets/js/vendor/jquery.js')}}"></script>    
+<!-- Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+   <script src="{{ ('frontendUser/assets/js/vendor/jquery.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/vendor/waypoints.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/bootstrap-bundle.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/meanmenu.js')}}"></script>
@@ -377,6 +382,6 @@
       <script src="{{ ('frontendUser/assets/js/imagesloaded-pkgd.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/ajax-form.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/main.js')}}"></script>
-     
+
    </body>
 </html>

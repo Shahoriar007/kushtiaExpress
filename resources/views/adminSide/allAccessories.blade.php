@@ -105,11 +105,11 @@
 
                                         <td>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="">
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                             <img src="{{asset('frontendAdmin/assets/img/icons/edit.svg')}}" alt="img">
                                             </button>
 
-                                            <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="update_product_lebel" aria-hidden="true">
+                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="update_product_lebel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -170,6 +170,16 @@
         </div>
     </div>
 
+    <script>
+      $(document).ready(function() {
+        // Initialize the modal
+        $('#myModal').modal({
+            show: false // Hide the modal by default
+        });
+    });
+
+
+    </script>
 
 
 @endsection
