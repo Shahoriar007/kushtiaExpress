@@ -174,80 +174,8 @@
     <div class="shop-area mb-20">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-4">
-                    <div class="product-widget mb-30">
-                        <h5 class="pt-title">Product categories</h5>
-                        <div class="widget-category-list mt-20">
-                            <form action="#">
 
-                                <div class="single-widget-category">
-                                    <input type="radio" id="cat-item-all" name="cat-item" value="all">
-                                        <label for="cat-item-all">All Category</label><br>
-                                    @foreach ($categories as $index => $item)
-                                        <input type="radio" id="cat-item-{{ $item->id }}" name="cat-item" value="{{ $item->id }}">
-                                        <label for="cat-item-{{ $item->id }}">{{ $item->categoryName }}</label>
-                                        <br>
-                                    @endforeach
-
-
-                                </div>
-
-
-
-                            </form>
-                        </div>
-                    </div>
-
-
-                    <div class="product-widget mb-30">
-                        <h5 class="pt-title">Choose Brand</h5>
-                        <div class="widget-category-list mt-20">
-                            <form action="#">
-                                <div class="single-widget-category">
-
-                                <input type="radio" id="brand-item-all" name="brand-item" value="all">
-                                <label for="brand-item-all">All Brand</label><br>
-                                </div>
-                                @foreach ($brands as $index => $item)
-                                    <div class="single-widget-category">
-                                        <input type="radio" id="brand-item-{{ $item->id }}" name="brand-item" value="{{ $item->id }}">
-                                        <label for="brand-item-{{ $item->id }}">{{ $item->brandName }} </label>
-                                        <br>
-                                    </div>
-                                @endforeach
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="product-widget mb-30">
-                        <h5 class="pt-title">Choose Filter</h5>
-                        <div class="widget-category-list mt-20">
-                            <form action="#">
-                                <div class="single-widget-category">
-                                    <input type="radio" id="new-arrival" name="filter-item" value="new-arrival">
-                                    <label for="new-arrival">New Arrival </label>
-                                    <br>
-
-
-                                </div>
-                                    <div class="single-widget-category">
-                                        <input type="radio" id="top-featured" name="filter-item" value="top-featured">
-                                        <label for="top-featured">Top Featured </label>
-                                        <br>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="radio" id="pre-owned" name="filter-item" value="pre-owned">
-                                        <label for="pre-owned">Pre Owned </label>
-                                        <br>
-
-
-                                    </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-xl-9 col-lg-8">
+                <div class="col-xl-12 col-lg-12">
                     {{-- <div class="shop-banner mb-30">
                         <div class="banner-image">
                             <img class="banner-l" src="{{ asset('assets/img/banner/sl-banner.jpg') }}"
@@ -287,11 +215,11 @@
                                             <?php
                                             $resultCount = $products->count();
                                             ?>
-                                            <p>Showing 12 of {{ $resultCount }} relults</p>
+                                            <p>Showing 16 of {{ $resultCount }} relults</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
                                     <div
                                         class="product__filter-right d-flex align-items-center justify-content-md-end">
                                         <div class="product__sorting product__show-no">
@@ -309,7 +237,7 @@
                             <div class="tp-wrapper">
                                 <div class="row g-0">
                                     @foreach ($products as $item)
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 product-item" data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}" data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}">
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 product-item" data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}" data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}">
                                             <div class="product__item product__item-d">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
@@ -489,7 +417,7 @@
     @foreach ($products as $item)
             <div class="modal fade" id="productModalId_{{ $item->id }}" tabindex="-1" role="dialog"
                 aria-hidden="true">
-           
+
         <div class="modal-dialog modal-dialog-centered product__modal" role="document">
             <div class="modal-content">
                 <div class="product__modal-wrapper p-relative">
@@ -546,7 +474,18 @@
                                 <div class="product__modal-content">
                                     <h4><a href="product-details.html">{{ $item->name }}</a></h4>
                                     <div class="product__review d-sm-flex">
-
+                                        <div class="rating rating__shop mb-10 mr-30">
+                                            <ul>
+                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__add-review mb-15">
+                                            <span>01 review</span>
+                                        </div>
                                     </div>
                                     <div class="product__price">
                                         <span> ৳ {{ $item->price }}</span>
@@ -559,11 +498,27 @@
                                         <span>{{ $item->availability }} in stock</span>
                                     </div>
                                     <div class="product__modal-form">
-                                        <a href="https://wa.me/+8801234567890" class=" st-btn-3 b-radius" style="background-color: #F9D70B"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-
+                                        <form action="#">
+                                            <div class="pro-quan-area d-lg-flex align-items-center">
+                                                <div class="product-quantity mr-20 mb-25">
+                                                    <div class="cart-plus-minus p-relative"><input type="text"
+                                                            value="1" /></div>
+                                                </div>
+                                                <div class="pro-cart-btn mb-25">
+                                                    <button class="cart-btn" type="submit">See Details</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="product__stock mb-30">
+                                        <ul>
 
+                                            <li><a href="#">
+                                                    <span class="cat mr-10">Categories:</span>
+                                                    <span>iPhone, Tablets</span></a>
+                                            </li>
+
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -573,38 +528,7 @@
             </div>
         </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-        $(document).ready(function() {
-            // Initially show all products
-            $(".product-item").show();
-
-            // Handle checkbox change events
-            $('input[name="cat-item"]').on('change', function() {
-                var selectedCategory = $(this).attr('id').split('-')[2]; // Removed space and val()
-                console.log(selectedCategory);
-                if (selectedCategory == 'all') {
-                    $(".product-item").show();
-
-                } else {
-                    $(".product-item[data-category='" + selectedCategory + "']").show();
-                    $(".product-item[data-category!='" + selectedCategory + "']").hide();                }
-            });
-
-             // Handle radio button change events
-    $('input[name="brand-item"]').on('change', function() {
-        var selectedBrand = $(this).attr('id').split('-')[2];
-        $(".product-item").show();
-        if (selectedBrand == 'all') {
-            $(".product-item").show();
-
-        } else {
-            $(".product-item[data-brand='" + selectedBrand + "']").show();
-            $(".product-item[data-brand!='" + selectedBrand + "']").hide();        }
-    });
-        });
-</script>
 
 
 

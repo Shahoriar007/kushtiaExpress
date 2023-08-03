@@ -99,12 +99,16 @@
                                                     accept="image/*" multiple>
                                                 <input type="file" name="photo3" id="photo3" class="form-control"
                                                     accept="image/*" multiple>
+                                                    <input type="file" name="photo4" id="photo4" class="form-control"
+                                                    accept="image/*" multiple>
+                                                    <input type="file" name="photo5" id="photo5" class="form-control"
+                                                    accept="image/*" multiple>
                                             </div>
                                         </div>
                                     </div>
 
 
-                              
+
 
 
                                     <div class="form-group mb-0 row">
@@ -123,7 +127,7 @@
                                         <label class="col-form-label col-md-2">Input Product Availability</label>
                                         <div class="col-md-10">
                                             <div class="input-group mb-3">
-                                                <select name="availibility" id="availibility">
+                                                <select name="availability" id="availability">
                                                     <option value="1">Yes</option>
                                                     <option value="0">No</option>
 

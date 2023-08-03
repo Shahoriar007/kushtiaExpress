@@ -42,10 +42,22 @@ Route::get('/about', [HomeController::class, 'about'])->name('aboutus');
 // Contact us
 Route::get('/contact', [HomeController::class, 'contact'])->name('contactus');
 //shop page
+Route::get('/accessory', [AccessoriesController::class, 'accessory'])->name('accessory');
+
 Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
 //details page
 Route::get('/accessory/details/{id}', [ProductsController::class, 'details'])->name('accessoryDetails');
 Route::get('/product/details/{id}', [ProductsController::class, 'details'])->name('productDetails');
+Route::get('/category/products/{id}', [CategoryController::class, 'details'])->name('category');
+Route::get('/brand/products/{id}', [BrandController::class, 'details'])->name('brand');
+Route::get('/top-featured', [ProductsController::class, 'topFeatured'])->name('topFeatured');
+
+Route::get('/pre-owned', [ProductsController::class, 'preOwned'])->name('preOwned');
+
+Route::get('/new-arrivals', [ProductsController::class, 'newArrivals'])->name('newArrivals');
+
+
+
 
 
 

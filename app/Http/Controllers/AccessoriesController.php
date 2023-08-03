@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\AccessoryProduct;
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -46,6 +48,9 @@ class AccessoriesController extends Controller
             'photo1' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo2' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo3' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'photo4' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'photo5' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+
         ]);
 
         // Store the Accessories
@@ -60,7 +65,7 @@ class AccessoriesController extends Controller
         $accessory->save();
 
          // Save the images
-        $images = ['photo1', 'photo2', 'photo3'];
+        $images = ['photo1', 'photo2', 'photo3', 'photo4', 'photo5'];
         foreach ($images as $imageInput) {
             if ($request->hasFile($imageInput)) {
                 $imageFile = $request->file($imageInput);
@@ -129,6 +134,14 @@ class AccessoriesController extends Controller
         }
 
         return redirect()->route('accessories.index')->with('error', 'Accessory product not found.');
+    }
+
+    public function accessory(){
+        $products = AccessoryProduct::latest()->get();
+        $categories = Category::all();
+        $brands = Brand::all();
+
+        return view('userSide.accessories', compact('products', 'categories', 'brands'));
     }
 
 }

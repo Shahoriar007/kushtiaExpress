@@ -12,4 +12,10 @@ class Brand extends Model
     public $fillable = [
         'brandName'
     ];
+
+    public function photo()
+    {
+        return $this->belongsTo(Photo::class, 'photo_id', 'id');
+    }
+
 }

@@ -13,11 +13,9 @@ class ShopController extends Controller
     //
     public function shop(){
         $products = Product::latest()->get();
-        $accessories = AccessoryProduct::latest()->get();
-        $productsAndAccessories = $products->concat($accessories);
         $categories = Category::all();
         $brands = Brand::all();
 
-        return view('userSide.shop', compact('productsAndAccessories', 'categories', 'brands'));
+        return view('userSide.shop', compact('products', 'categories', 'brands'));
     }
 }

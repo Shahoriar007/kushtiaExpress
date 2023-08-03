@@ -101,7 +101,12 @@
                                         {{-- <td class="productimgname">a</td> --}}
                                         <td><a href="#">{{ $item->name }}</a></td>
                                         <td>{{ $item->price }}</td>
-                                        <td>{{ $item->availability }}</td>
+
+                                            @if($item->availability == 1)
+                                            <td>Available</td>
+                                            @else
+                                            <td>Not Available</td>
+                                            @endif
 
                                         <td>
                                             <!-- Button trigger modal -->

@@ -44,6 +44,15 @@
 
                                     </div>
                                 </div>
+                                <label class="col-form-label col-md-2">Upload Brand Photo</label>
+                                <div class="col-md-10">
+                                    <div class="input-group mb-3">
+                                        <input type="file" name="photo" id="photo" class="form-control">
+
+                                    </div>
+                                </div>
+
+
 
 
 

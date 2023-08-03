@@ -86,170 +86,55 @@
                                     <nav id="mobile-menu" style="display: block;">
                                         <ul>
                                             <li>
-                                                <a href="shop.html">All Categories <i class="far fa-angle-down"></i></a>
-                                                <ul class="mega-menu">
-                                                    <li><a href="shop.html">Shop Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Standard SHop Page</a></li>
-                                                            <li><a href="product-details.html">Shop Right Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop Left Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop 3 Column</a></li>
-                                                            <li><a href="product-details.html">Shop 4 Column</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Product Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Product Details</a></li>
-                                                            <li><a href="product-details.html">Product V2</a></li>
-                                                            <li><a href="product-details.html">Product V3</a></li>
-                                                            <li><a href="product-details.html">Varriable Product</a></li>
-                                                            <li><a href="product-details.html">External Product</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Other Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">wishlist</a></li>
-                                                            <li><a href="product-details.html">Shopping Cart</a></li>
-                                                            <li><a href="product-details.html">Checkout</a></li>
-                                                            <li><a href="product-details.html">Login</a></li>
-                                                            <li><a href="product-details.html">Register</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <a href="{{ route('accessory') }}">Accessories </a>
+
                                             </li>
                                             <li>
-                                                <a href="shop.html">Phone and Electronics <i class="far fa-angle-down"></i></a>
+                                                <a href="shop.html">Products <i class="far fa-angle-down"></i></a>
                                                 <ul class="mega-menu mega-menu-2">
-                                                    <li><a href="shop.html">Shop Pages</a>
+                                                    <li><a href="#">Categories</a>
                                                         <ul class="mega-item">
-                                                            <li><a href="product-details.html">Standard SHop Page</a></li>
-                                                            <li><a href="product-details.html">Shop Right Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop Left Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop 3 Column</a></li>
-                                                            <li><a href="product-details.html">Shop 4 Column</a></li>
+                                                            @foreach($categories as $item)
+                                                            <li><a href="{{ route('category', ['id' => $item->id]) }}">{{ $item->categoryName }}</a></li>
+
+                                                            @endforeach
                                                         </ul>
                                                     </li>
-                                                    <li><a href="shop.html">Product Pages</a>
+
+                                                    <li><a href="#">Brands</a>
                                                         <ul class="mega-item">
-                                                            <li><a href="product-details.html">Product Details</a></li>
-                                                            <li><a href="product-details.html">Product V2</a></li>
-                                                            <li><a href="product-details.html">Product V3</a></li>
-                                                            <li><a href="product-details.html">Varriable Product</a></li>
-                                                            <li><a href="product-details.html">External Product</a></li>
+                                                            @foreach($brands as $item)
+                                                            <li><a href="{{ route('brand', ['id' => $item->id]) }}">{{ $item->brandName }}</a></li>
+
+                                                            @endforeach
                                                         </ul>
                                                     </li>
-                                                    <li><a href="shop.html">Other Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">wishlist</a></li>
-                                                            <li><a href="product-details.html">Shopping Cart</a></li>
-                                                            <li><a href="product-details.html">Checkout</a></li>
-                                                            <li><a href="product-details.html">Login</a></li>
-                                                            <li><a href="product-details.html">Register</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
+
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="shop.html">Best Seller Products
+                                                <a href="{{ route('newArrivals') }}">New Arrivals
                                                     <span class="cat-label">hot!</span>
                                                     <i class="far fa-angle-down"></i>
                                                 </a>
-                                                <ul class="mega-menu">
-                                                    <li><a href="shop.html">Shop Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Standard SHop Page</a></li>
-                                                            <li><a href="product-details.html">Shop Right Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop Left Sidebar</a></li>
-                                                            <li><a href="product-details.html">Shop 3 Column</a></li>
-                                                            <li><a href="product-details.html">Shop 4 Column</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Product Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Product Details</a></li>
-                                                            <li><a href="product-details.html">Product V2</a></li>
-                                                            <li><a href="product-details.html">Product V3</a></li>
-                                                            <li><a href="product-details.html">Varriable Product</a></li>
-                                                            <li><a href="product-details.html">External Product</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Other Pages</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">wishlist</a></li>
-                                                            <li><a href="product-details.html">Shopping Cart</a></li>
-                                                            <li><a href="product-details.html">Checkout</a></li>
-                                                            <li><a href="product-details.html">Login</a></li>
-                                                            <li><a href="product-details.html">Register</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Phone &amp; Tablets</a>
-                                                        <ul class="mega-item">
-                                                            <li><a href="product-details.html">Catagory 1</a></li>
-                                                            <li><a href="product-details.html">Catagory 2</a></li>
-                                                            <li><a href="product-details.html">Catagory 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+
                                             </li>
                                             <li>
-                                                <a href="shop.html">Top 10 Offers
-                                                    <span class="cat-label green">new!</span>
+                                                <a href="{{ route('preOwned') }}">Pre Owned Products
+                                                    <i class="far fa-angle-down"></i>
                                                 </a>
+
                                             </li>
+
                                             <li>
-                                                <a href="shop.html">New Arrivals <i class="far fa-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="shop.html">Home Appliances</a></li>
-                                                    <li><a href="shop.html">Technology</a>
-                                                        <ul class="submenu">
-                                                            <li><a href="shop.html">Storage Devices</a></li>
-                                                            <li><a href="shop.html">Monitors</a></li>
-                                                            <li><a href="shop.html">Laptops</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="shop.html">Office Equipments</a></li>
-                                                </ul>
+                                                <a href="{{ route('topFeatured') }}">Top Featured Products
+                                                    <i class="far fa-angle-down"></i>
+                                                </a>
+
                                             </li>
-                                            <li><a href="shop.html">TV &amp; Audio</a></li>
-                                            <li><a href="shop.html">Electronics &amp; Digital</a></li>
-                                            <li class="d-laptop-none"><a href="shop.html">Fashion &amp; Clothings</a></li>
-                                            <li class="d-laptop-none"><a href="shop.html">Jewelry &amp; Watches</a></li>
-                                            <li><a href="shop.html">Health &amp; Beauty</a></li>
+
+
+
                                         </ul>
                                     </nav>
                                 </div>
@@ -270,7 +155,6 @@
                                     <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                     <li><a href="{{ route('shop') }}">Products</a></li>
                                     <li><a href="{{ route('contactus') }}">Contact Us</a></li>
-                                    <li><a href="{{ route('login') }}">Login</a></li>
                                 </ul>
                             </nav>
                         </div>

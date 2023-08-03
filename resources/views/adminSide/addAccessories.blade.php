@@ -53,9 +53,15 @@
                                             <input type="file" name="photo1" id="photo1" class="form-control" accept="image/*" multiple>
                                             <input type="file" name="photo2" id="photo2" class="form-control" accept="image/*" multiple>
                                             <input type="file" name="photo3" id="photo3" class="form-control" accept="image/*" multiple>
+                                            <input type="file" name="photo4" id="photo4" class="form-control" accept="image/*" multiple>
+                                            <input type="file" name="photo5" id="photo5" class="form-control" accept="image/*" multiple>
                                         </div>
-                                    </div>
+
+                                        </div>
+
+
                                 </div>
+
 
 
 
