@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -110,5 +112,11 @@ class CategoryController extends Controller
         }
 
         return redirect()->route('categoryView')->with('error', 'category not found.');
+    }
+    public function details($id){
+        $products = Product::where('category_id', '=', $id)->paginate(12);
+        $categories = Category::all();
+        $brands = Brand::all();
+        return view('userSide.categoryProducts', compact('products', 'categories', 'brands'));
     }
 }

@@ -7,6 +7,7 @@
 @section('content')
 
 
+
     <!--[if lte IE 9]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
           <![endif]-->
@@ -219,6 +220,39 @@
                         </div>
                     </div>
 
+                    <div class="product-widget mb-30">
+                        <h5 class="pt-title">Choose Filter</h5>
+                        <div class="widget-category-list mt-20">
+                            <form action="#">
+                                <div class="single-widget-category">
+                                <input type="radio" id="filter-item-all" name="filter-item" value="all">
+                                <label for="filter-item-all">All</label><br>
+                                </div>
+
+                                <div class="single-widget-category">
+                                    <input type="radio" id="new_arrival" name="filter-item" value="new_arrival">
+                                    <label for="new_arrival">New Arrival </label>
+                                    <br>
+
+
+                                </div>
+                                <div class="single-widget-category">
+                                    <input type="radio" id="pre_owned" name="filter-item" value="pre_owned">
+                                    <label for="pre_owned">Pre Owned </label>
+                                    <br>
+
+
+                                </div>
+                                <div class="single-widget-category">
+                                        <input type="radio" id="top_featured" name="filter-item" value="top_featured">
+                                        <label for="top_featured">Top Featured </label>
+                                        <br>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-xl-9 col-lg-8">
                     {{-- <div class="shop-banner mb-30">
@@ -235,93 +269,39 @@
                     </div> --}}
                     <div class="product-lists-top">
                         <div class="product__filter-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="product__filter d-sm-flex align-items-center">
-                                        <div class="product__col">
-                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link active" id="FourCol-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#FourCol" type="button"
-                                                        role="tab" aria-controls="FourCol" aria-selected="true">
-                                                        <i class="fal fa-th"></i>
-                                                    </button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="FiveCol-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#FiveCol" type="button" role="tab"
-                                                        aria-controls="FiveCol" aria-selected="false">
-                                                        <i class="fal fa-list"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__result pl-60">
-                                            <?php
-                                            $resultCount = $productsAndAccessories->count();
-                                            ?>
-                                            <p>Showing 12 of {{ $resultCount }} relults</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div
-                                        class="product__filter-right d-flex align-items-center justify-content-md-end">
-                                        <div class="product__sorting product__show-no">
 
-                                        </div>
-                                        <div class="product__sorting product__show-position ml-20">
-                                            <select>
-                                                <option>New</option>
-                                                <option>Pre Owned</option>
-                                                <option>Top Featured</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+
+                        </div>
+
                     <div class="tab-content" id="productGridTabContent">
                         <div class="tab-pane fade  show active" id="FourCol" role="tabpanel"
                             aria-labelledby="FourCol-tab">
                             <div class="tp-wrapper">
                                 <div class="row g-0">
-                                    @foreach ($productsAndAccessories as $item)
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 product-item" data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}" data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}">
+                                    @foreach ($products as $item)
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 product-item"
+                                    data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}"
+                                    data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}"
+                                    data-filter="{{ $item->is_new ? 'new_arrival' : ($item->pre_owned ? 'pre_owned' : 'top_featured') }}">
                                             <div class="product__item product__item-d">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        @if (isset($item->category_id))
                                                         <a href="{{ route('productDetails', ['id' => $item->id]) }}">
                                                             <img src="{{ asset($item->photos->first()->image_path) }}"
                                                                 alt="product">
                                                         </a>
-                                                        @else
-                                                        <a href="{{ route('accessoryDetails', ['id' => $item->id]) }}">
-                                                            <img src="{{ asset($item->photos->first()->image_path) }}"
-                                                                alt="product">
-                                                        </a>
-                                                        @endif
+
 
                                                     </div>
                                                     <div class="product-action">
-                                                        @if (isset($item->category_id))
                                                             <a href="#" class="icon-box icon-box-1"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#productModalId_{{ $item->id }}">
                                                                 <i class="fal fa-eye"></i>
                                                                 <i class="fal fa-eye"></i>
                                                             </a>
-                                                        @else
-                                                            <a href="#" class="icon-box icon-box-1"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#accessoryModalId_{{ $item->id }}">
-                                                                <i class="fal fa-eye"></i>
-                                                                <i class="fal fa-eye"></i>
-                                                            </a>
-                                                        @endif
+
 
                                                     </div>
                                                 </div>
@@ -333,23 +313,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__add-cart-s text-center">
-                                                    @if (isset($item->category_id))
                                                     <a href="{{ route('productDetails', ['id' => $item->id]) }}">
                                                         <button type="button"
                                                             class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
                                                             See Details
                                                         </button>
                                                     </a>
-                                                    @else
-                                                    <a href="{{ route('accessoryDetails', ['id' => $item->id]) }}">
-                                                        <button type="button"
-                                                            class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
-                                                            See Details
-                                                        </button>
-                                                    </a>
-                                                    @endif
 
-                                                    @if (isset($item->category_id))
+
 
                                                     <button type="button"
                                                         class="wc-checkout d-flex align-items-center justify-content-center w-100"
@@ -357,15 +328,7 @@
                                                         Quick View
                                                     </button>
 
-                                                    @else
 
-                                                    <button type="button"
-                                                    class="wc-checkout d-flex align-items-center justify-content-center w-100"
-                                                    data-bs-toggle="modal" data-bs-target="#accessoryModalId_{{ $item->id }}">
-                                                    Quick View
-                                                    </button>
-
-                                                    @endif
 
                                                 </div>
                                             </div>
@@ -457,38 +420,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tp-pagination text-center">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="basic-pagination pt-30 pb-30">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <a href="shop.html" class="active">1</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">5</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">6</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">
-                                                    <i class="fal fa-angle-double-right"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="custom-pagination">
+                        {{ $products->links() }}
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -497,14 +434,10 @@
 
 
     <!-- accessory modal start -->
-    @foreach ($productsAndAccessories as $item)
-        @if (isset($item->category_id))
+    @foreach ($products as $item)
             <div class="modal fade" id="productModalId_{{ $item->id }}" tabindex="-1" role="dialog"
                 aria-hidden="true">
-            @else
-                <div class="modal fade" id="accessoryModalId_{{ $item->id }}" tabindex="-1" role="dialog"
-                    aria-hidden="true">
-        @endif
+
         <div class="modal-dialog modal-dialog-centered product__modal" role="document">
             <div class="modal-content">
                 <div class="product__modal-wrapper p-relative">
@@ -561,18 +494,7 @@
                                 <div class="product__modal-content">
                                     <h4><a href="product-details.html">{{ $item->name }}</a></h4>
                                     <div class="product__review d-sm-flex">
-                                        <div class="rating rating__shop mb-10 mr-30">
-                                            <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__add-review mb-15">
-                                            <span>01 review</span>
-                                        </div>
+
                                     </div>
                                     <div class="product__price">
                                         <span> ৳ {{ $item->price }}</span>
@@ -585,27 +507,11 @@
                                         <span>{{ $item->availability }} in stock</span>
                                     </div>
                                     <div class="product__modal-form">
-                                        <form action="#">
-                                            <div class="pro-quan-area d-lg-flex align-items-center">
-                                                <div class="product-quantity mr-20 mb-25">
-                                                    <div class="cart-plus-minus p-relative"><input type="text"
-                                                            value="1" /></div>
-                                                </div>
-                                                <div class="pro-cart-btn mb-25">
-                                                    <button class="cart-btn" type="submit">See Details</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <a href="https://wa.me/+8801234567890" class=" st-btn-3 b-radius" style="background-color: #F9D70B"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
                                     </div>
                                     <div class="product__stock mb-30">
-                                        <ul>
 
-                                            <li><a href="#">
-                                                    <span class="cat mr-10">Categories:</span>
-                                                    <span>iPhone, Tablets</span></a>
-                                            </li>
-
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -615,6 +521,8 @@
             </div>
         </div>
         </div>
+
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -645,10 +553,20 @@
             $(".product-item[data-brand='" + selectedBrand + "']").show();
             $(".product-item[data-brand!='" + selectedBrand + "']").hide();        }
     });
+// Handle filter change events
+$('input[name="filter-item"]').on('change', function () {
+            var selectedFilter = $(this).val();
+            console.log(selectedFilter);
+            if (selectedFilter === 'all') {
+                $(".product-item").show();
+            } else {
+                $(".product-item").hide();
+                $(".product-item[data-filter='" + selectedFilter + "']").show();
+            }
+        });
+
         });
 </script>
-
-
 
 
 
