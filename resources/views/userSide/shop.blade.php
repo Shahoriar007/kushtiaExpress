@@ -267,6 +267,12 @@
                             </div>
                         </div>
                     </div> --}}
+                    <div class="product-lists-top">
+                        <div class="product__filter-wrap">
+
+                        </div>
+
+                        </div>
 
                     <div class="tab-content" id="productGridTabContent">
                         <div class="tab-pane fade  show active" id="FourCol" role="tabpanel"

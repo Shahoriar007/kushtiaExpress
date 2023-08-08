@@ -114,7 +114,7 @@ class CategoryController extends Controller
         return redirect()->route('categoryView')->with('error', 'category not found.');
     }
     public function details($id){
-        $products = Product::where('category_id', '=', $id)->paginate(1);
+        $products = Product::where('category_id', '=', $id)->paginate(12);
         $categories = Category::all();
         $brands = Brand::all();
         return view('userSide.categoryProducts', compact('products', 'categories', 'brands'));
