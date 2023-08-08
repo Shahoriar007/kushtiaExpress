@@ -436,38 +436,9 @@
                                                     alt="" width="120px">
                                             </div>
                                         </div>
-                                        @foreach ($item->photos->slice(1) as $photo)
-                                            <div class="tab-pane fade" id="nav{{ $loop->index + 1 }}"
-                                                role="tabpanel" aria-labelledby="nav{{ $loop->index + 1 }}-tab">
-                                                <div class="product__modal-img w-img">
-                                                    <img src=" {{ asset($photo->image_path) }}"
-                                                        alt="Photo {{ $loop->index + 1 }}" width="120px">
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <ul class="nav nav-tabs" id="modalTab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="nav1-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav1" type="button" role="tab"
-                                                aria-controls="nav1" aria-selected="true">
-                                                <img src="{{ asset($item->photos->first()->image_path) }}"
-                                                    alt="" width="120px">
-                                            </button>
-                                        </li>
-                                        @foreach ($item->photos->slice(1) as $photo)
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="nav{{ $loop->index + 1 }}-tab"
-                                                    data-bs-toggle="tab" data-bs-target="#nav{{ $loop->index + 1 }}"
-                                                    type="button" role="tab"
-                                                    aria-controls="nav{{ $loop->index + 1 }}" aria-selected="false">
-                                                    <img src="{{ asset($photo->image_path) }}"
-                                                        alt="Photo {{ $loop->index + 1 }}" width="120px">
-                                                </button>
-                                            </li>
-                                        @endforeach
 
-                                    </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -491,7 +462,7 @@
 
                                     </div>
                                     <div class="product__stock mb-30">
-                                       
+
                                     </div>
                                 </div>
                             </div>

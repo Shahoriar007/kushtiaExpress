@@ -224,24 +224,30 @@
                         <div class="widget-category-list mt-20">
                             <form action="#">
                                 <div class="single-widget-category">
-                                    <input type="radio" id="new-arrival" name="filter-item" value="new-arrival">
-                                    <label for="new-arrival">New Arrival </label>
+                                <input type="radio" id="filter-item-all" name="filter-item" value="all">
+                                <label for="filter-item-all">All</label><br>
+                                </div>
+
+                                <div class="single-widget-category">
+                                    <input type="radio" id="new_arrival" name="filter-item" value="new_arrival">
+                                    <label for="new_arrival">New Arrival </label>
                                     <br>
 
 
                                 </div>
-                                    <div class="single-widget-category">
-                                        <input type="radio" id="top-featured" name="filter-item" value="top-featured">
-                                        <label for="top-featured">Top Featured </label>
-                                        <br>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="radio" id="pre-owned" name="filter-item" value="pre-owned">
-                                        <label for="pre-owned">Pre Owned </label>
-                                        <br>
+                                <div class="single-widget-category">
+                                    <input type="radio" id="pre_owned" name="filter-item" value="pre_owned">
+                                    <label for="pre_owned">Pre Owned </label>
+                                    <br>
 
 
-                                    </div>
+                                </div>
+                                <div class="single-widget-category">
+                                        <input type="radio" id="top_featured" name="filter-item" value="top_featured">
+                                        <label for="top_featured">Top Featured </label>
+                                        <br>
+                                </div>
+
                             </form>
                         </div>
                     </div>
@@ -309,7 +315,10 @@
                             <div class="tp-wrapper">
                                 <div class="row g-0">
                                     @foreach ($products as $item)
-                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 product-item" data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}" data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}">
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 product-item"
+                                    data-category="{{ isset($item->category_id) ? $item->category_id : 'accessory' }}"
+                                    data-brand="{{ isset($item->brand_id) ? $item->brand_id : 'accessory' }}"
+                                    data-filter="{{ $item->is_new ? 'new_arrival' : ($item->pre_owned ? 'pre_owned' : 'top_featured') }}">
                                             <div class="product__item product__item-d">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
@@ -489,7 +498,7 @@
     @foreach ($products as $item)
             <div class="modal fade" id="productModalId_{{ $item->id }}" tabindex="-1" role="dialog"
                 aria-hidden="true">
-           
+
         <div class="modal-dialog modal-dialog-centered product__modal" role="document">
             <div class="modal-content">
                 <div class="product__modal-wrapper p-relative">
@@ -603,10 +612,20 @@
             $(".product-item[data-brand='" + selectedBrand + "']").show();
             $(".product-item[data-brand!='" + selectedBrand + "']").hide();        }
     });
+// Handle filter change events
+$('input[name="filter-item"]').on('change', function () {
+            var selectedFilter = $(this).val();
+            console.log(selectedFilter);
+            if (selectedFilter === 'all') {
+                $(".product-item").show();
+            } else {
+                $(".product-item").hide();
+                $(".product-item[data-filter='" + selectedFilter + "']").show();
+            }
+        });
+
         });
 </script>
-
-
 
 
 

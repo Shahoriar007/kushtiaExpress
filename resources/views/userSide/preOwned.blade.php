@@ -436,56 +436,16 @@
                                                     alt="" width="120px">
                                             </div>
                                         </div>
-                                        @foreach ($item->photos->slice(1) as $photo)
-                                            <div class="tab-pane fade" id="nav{{ $loop->index + 1 }}"
-                                                role="tabpanel" aria-labelledby="nav{{ $loop->index + 1 }}-tab">
-                                                <div class="product__modal-img w-img">
-                                                    <img src=" {{ asset($photo->image_path) }}"
-                                                        alt="Photo {{ $loop->index + 1 }}" width="120px">
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                        
                                     </div>
-                                    <ul class="nav nav-tabs" id="modalTab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="nav1-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav1" type="button" role="tab"
-                                                aria-controls="nav1" aria-selected="true">
-                                                <img src="{{ asset($item->photos->first()->image_path) }}"
-                                                    alt="" width="120px">
-                                            </button>
-                                        </li>
-                                        @foreach ($item->photos->slice(1) as $photo)
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="nav{{ $loop->index + 1 }}-tab"
-                                                    data-bs-toggle="tab" data-bs-target="#nav{{ $loop->index + 1 }}"
-                                                    type="button" role="tab"
-                                                    aria-controls="nav{{ $loop->index + 1 }}" aria-selected="false">
-                                                    <img src="{{ asset($photo->image_path) }}"
-                                                        alt="Photo {{ $loop->index + 1 }}" width="120px">
-                                                </button>
-                                            </li>
-                                        @endforeach
 
-                                    </ul>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product__modal-content">
                                     <h4><a href="product-details.html">{{ $item->name }}</a></h4>
                                     <div class="product__review d-sm-flex">
-                                        <div class="rating rating__shop mb-10 mr-30">
-                                            <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__add-review mb-15">
-                                            <span>01 review</span>
-                                        </div>
+
                                     </div>
                                     <div class="product__price">
                                         <span> ৳ {{ $item->price }}</span>
@@ -498,27 +458,13 @@
                                         <span>{{ $item->availability }} in stock</span>
                                     </div>
                                     <div class="product__modal-form">
-                                        <form action="#">
-                                            <div class="pro-quan-area d-lg-flex align-items-center">
-                                                <div class="product-quantity mr-20 mb-25">
-                                                    <div class="cart-plus-minus p-relative"><input type="text"
-                                                            value="1" /></div>
-                                                </div>
-                                                <div class="pro-cart-btn mb-25">
-                                                    <button class="cart-btn" type="submit">See Details</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <div class="product__modal-form">
+                                            <a href="https://wa.me/+8801234567890" class=" st-btn-3 b-radius" style="background-color: #F9D70B"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+                                        </div>
                                     </div>
                                     <div class="product__stock mb-30">
-                                        <ul>
 
-                                            <li><a href="#">
-                                                    <span class="cat mr-10">Categories:</span>
-                                                    <span>iPhone, Tablets</span></a>
-                                            </li>
-
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
