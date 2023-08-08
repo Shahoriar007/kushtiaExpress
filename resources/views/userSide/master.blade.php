@@ -23,12 +23,28 @@
       <link rel="stylesheet" href="{{ asset('frontendUser/assets/css/default.css')}}">
       <link rel="stylesheet" href="{{ asset('frontendUser/assets/css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('frontendUser/assets/css/custom.css')}}">
+
+      <style>
+        .custom-pagination {
+        text-align: center;
+    }
+
+    .custom-pagination .pagination {
+        display: inline-block;
+    }
+
+    .shadow-sm {
+        display: none;
+    }
+
+</style>
+
    </head>
    <body>
 
    @yield('placeholder')
 
-       <!-- back to top start -->
+
        <div class="progress-wrap">
          <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -266,6 +282,8 @@
       <script src="{{ ('frontendUser/assets/js/imagesloaded-pkgd.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/ajax-form.js')}}"></script>
       <script src="{{ ('frontendUser/assets/js/main.js')}}"></script>
+
+
 
    </body>
 </html>

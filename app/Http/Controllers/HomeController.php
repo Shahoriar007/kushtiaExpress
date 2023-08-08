@@ -29,11 +29,15 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('userSide.contact');
+        $categories = Category::all();
+        $brands = Brand::all();
+        return view('userSide.contact', compact('categories', 'brands'));
     }
 
     public function about()
     {
-        return view('userSide.about');
+        $categories = Category::all();
+        $brands = Brand::all();
+        return view('userSide.about', compact('categories', 'brands'));
     }
 }

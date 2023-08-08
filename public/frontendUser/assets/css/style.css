@@ -42,7 +42,7 @@
 }
 
 /*---------------------------------
-    typography css start 
+    typography css start
 ---------------------------------*/
 body {
   font-family: "Rubik", sans-serif;
@@ -216,7 +216,7 @@ input {
 }
 
 /*---------------------------------
-    common classes css start 
+    common classes css start
 ---------------------------------*/
 .w-img img {
   width: 100%;
@@ -321,7 +321,7 @@ input {
   }
 }
 /*----------------------------------------
-    Body Overlay 
+    Body Overlay
 -----------------------------------------*/
 .body-overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -6895,7 +6895,7 @@ p.checkout-coupon input[type=text]::placeholder {
 
 .heade-mid-inner {
     padding: 0px 0pc 0px 0px !important;
-    
+
   }
 .slider-title{
   font-size: 60px !important;
@@ -6903,11 +6903,11 @@ p.checkout-coupon input[type=text]::placeholder {
 .main-slider-paginations {
 
   bottom: 30px !important;
- 
+
 }
 .featured .owl-theme .col-xl-6{
   width: 100%;
-  
+
 }
 
 .featured .owl-nav
@@ -6929,7 +6929,7 @@ p.checkout-coupon input[type=text]::placeholder {
 }
 .featured .owl-prev{
   left: 0;
- 
+
   color: white;
 }
 .featured .owl-next{
@@ -6953,3 +6953,4 @@ p.checkout-coupon input[type=text]::placeholder {
     width: 690px !important;
     }
 }
+

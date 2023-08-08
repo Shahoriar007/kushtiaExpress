@@ -7,6 +7,7 @@
 @section('content')
 
 
+
     <!--[if lte IE 9]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
           <![endif]-->
@@ -266,49 +267,7 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="product-lists-top">
-                        <div class="product__filter-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="product__filter d-sm-flex align-items-center">
-                                        <div class="product__col">
-                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link active" id="FourCol-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#FourCol" type="button"
-                                                        role="tab" aria-controls="FourCol" aria-selected="true">
-                                                        <i class="fal fa-th"></i>
-                                                    </button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="FiveCol-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#FiveCol" type="button" role="tab"
-                                                        aria-controls="FiveCol" aria-selected="false">
-                                                        <i class="fal fa-list"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="product__result pl-60">
-                                            <?php
-                                            $resultCount = $products->count();
-                                            ?>
-                                            <p>Showing 12 of {{ $resultCount }} relults</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div
-                                        class="product__filter-right d-flex align-items-center justify-content-md-end">
-                                        <div class="product__sorting product__show-no">
 
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="tab-content" id="productGridTabContent">
                         <div class="tab-pane fade  show active" id="FourCol" role="tabpanel"
                             aria-labelledby="FourCol-tab">
@@ -455,38 +414,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tp-pagination text-center">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="basic-pagination pt-30 pb-30">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <a href="shop.html" class="active">1</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">5</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">6</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">
-                                                    <i class="fal fa-angle-double-right"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="custom-pagination">
+                        {{ $products->links() }}
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -582,6 +515,8 @@
             </div>
         </div>
         </div>
+
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>

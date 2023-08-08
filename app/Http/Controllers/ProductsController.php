@@ -172,7 +172,7 @@ class ProductsController extends Controller
     }
 
     public function topFeatured(){
-        $products = Product::where('top_featured', '=', '1')->get();
+        $products = Product::where('top_featured', '=', '1')->paginate(1);
         $categories = Category::all();
         $brands = Brand::all();
 
@@ -180,14 +180,14 @@ class ProductsController extends Controller
     }
 
     public function preOwned(){
-        $products = Product::where('pre_owned', '=', '1')->get();
+        $products = Product::where('pre_owned', '=', '1')->paginate(1);
         $categories = Category::all();
         $brands = Brand::all();
         return view('userSide.preOwned', compact('products', 'categories', 'brands'));
     }
 
     public function newArrivals(){
-        $products = Product::where('is_new', '=', '1')->get();
+        $products = Product::where('is_new', '=', '1')->paginate(1);
         $categories = Category::all();
         $brands = Brand::all();
         return view('userSide.newArrivals', compact('products', 'categories', 'brands'));

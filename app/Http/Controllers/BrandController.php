@@ -133,7 +133,7 @@ class BrandController extends Controller
     }
 
     public function details($id){
-        $products = Product::where('brand_id', '=', $id)->get();
+        $products = Product::where('brand_id', '=', $id)->paginate(1);
         $categories = Category::all();
         $brands = Brand::all();
         return view('userSide.brandProducts', compact('products', 'categories', 'brands'));    }

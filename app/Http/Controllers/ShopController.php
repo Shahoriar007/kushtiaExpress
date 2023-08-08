@@ -12,7 +12,7 @@ class ShopController extends Controller
 {
     //
     public function shop(){
-        $products = Product::latest()->get();
+        $products = Product::latest()->paginate(9);
         $categories = Category::all();
         $brands = Brand::all();
 

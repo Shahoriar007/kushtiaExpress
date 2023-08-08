@@ -137,7 +137,7 @@ class AccessoriesController extends Controller
     }
 
     public function accessory(){
-        $products = AccessoryProduct::latest()->get();
+        $products = AccessoryProduct::latest()->paginate(12);
         $categories = Category::all();
         $brands = Brand::all();
 
