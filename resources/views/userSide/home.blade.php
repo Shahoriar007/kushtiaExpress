@@ -270,7 +270,7 @@
                                     <h6><a href="product-details.html">Exchange</a></h6>
                                     <p>Laptop, Computer, Smartphone, Gampad</p>
                                     <div class="banner-button mt-20 d-none d-sm-block">
-                                        <a href="#" class="st-btn-3 b-radius">Phone</a>
+                                        <a href="tel:+8801799702025" class="st-btn-3 b-radius">Phone</a>
                                         <a href="https://wa.me/+8801234567890" class="st-btn-3 b-radius"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
                                     </div>
@@ -289,7 +289,7 @@
                                     <h6><a href="#">Sell</a></h6>
                                     <p>Discount 20% On Products</p>
                                     <div class="banner-button mt-20 d-none d-sm-block">
-                                        <a href="product-details.html" class="st-btn-3 b-radius">Phone</a>
+                                        <a href="tel:+8801799702025" class="st-btn-3 b-radius">Phone</a>
                                         <a href="https://wa.me/+8801234567890" class="st-btn-3 b-radius"><i class="fab fa-whatsapp"></i> WhatsApp</a>                                    </div>
                                 </div>
                             </div>
@@ -483,7 +483,7 @@
                             <h5 class="st-titile">Top Featured Products</h5>
                         </div>
                         <div class="button-wrap">
-                            <a href="{{ route('topFeatured') }}">See All Product <i class="fal fa-chevron-right"></i></a>
+                            <a href="{{ route('topFeatured') }}">See All Featured Product <i class="fal fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -733,7 +733,7 @@
                                             </div>
 
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

@@ -22,9 +22,11 @@ class ProductsController extends Controller
     public function index()
     {
         $productItems = Product::latest()->get();
+        $categoryItems = Category::all();
 
+        $brandItems = Brand::all();
 
-        return view('adminSide.allProducts', compact('productItems'));
+        return view('adminSide.allProducts', compact('productItems', 'categoryItems', 'brandItems'));
     }
 
     /**

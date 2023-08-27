@@ -15,9 +15,9 @@
                         <div class="page-banner-content text-center">
                             <h3>About Us</h3>
                             <p>A wonderful serenity has taken possession of my entire soul, like these <br> sweet mornings of spring which I enjoy with my whole heart.</p>
-                            <div class="page-bottom-btn mt-55">
+                            {{-- <div class="page-bottom-btn mt-55">
                                 <a href="shop.html" class="st-btn-4">Discover now</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
         </div>
         <!-- services-area-end -->
 
-       
+
 
     </main>
 
