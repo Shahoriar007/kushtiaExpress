@@ -25,7 +25,7 @@
                                             <span>Contact Us</span>
                                          </li>
                                       </ul>
-                                   </nav> 
+                                   </nav>
                                 </nav>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
         <!-- location-area-start -->
         <div class="location-area pt-70 pb-25">
             <div class="container">
-                <div class="row mb-25">
+                {{-- <div class="row mb-25">
                     <div class="col-xl-12">
                         <div class="abs-section-title text-center">
                             <span>LOCATION STORE</span>
@@ -46,7 +46,7 @@
                             <p>The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit <br> in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                     <div class="col-xl-8  col-lg-8 col-md-6">
                         <div class="location-image w-img mb-20">
@@ -55,14 +55,15 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="location-item mb-30">
-                            <h6>26 Rue Pelleport - Paris</h6>
+
                             <div class="sm-item-loc sm-item-border mb-20">
                                 <div class="sml-icon mr-20">
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
-                                <div class="sm-content">
-                                    <span>Find us</span>
-                                    <p>Rue Saint-Antoine, Paris, France  </p>  
+                                <div class="sm-content" >
+                                    <span>ঠিকানা</span>
+                                    <p style="line-height: 1.8;">আমাদের শোরুম বাংলাদেশের খুলনা বিভাগের কুষ্টিয়া জেলায় অবস্থিত।
+                                        কুষ্টিয়া  সদরের  প্রধান  কেন্দ্র  মজমপুরের চৌধুরী মার্কেটের দ্বিতীয়  তলায় ২০২২ থেকে কার্যক্রম অনুষ্ঠিত হচ্ছে। সহজে খুঁজতে হলে কুষ্টিয়া পৌরসভার সামনে দাঁড়ালে আমাদের শোরুম দৃশ্যমান হয় তাছাড়া গুগলে EXCHANGER BD দিয়ে সার্চ করলে আমাদের শোরুমের লাইভ লোকেশন দেখিয়ে দেবে |</p>
                                 </div>
                             </div>
                             <div class="sm-item-loc sm-item-border mb-20">
@@ -70,17 +71,46 @@
                                     <i class="fal fa-phone-alt"></i>
                                 </div>
                                 <div class="sm-content">
-                                    <span>Call us</span>
-                                    <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>  
+                                    <span>রাশেদ মালিথা(মালিক)</span>
+                                    <p><a href="tel:+8801711338820">01711338820</a></p>
+                                    <p style="line-height: 1.7;">যে কোন প্রোডাক্ট বিক্রির জন্য সরাসরি যোগাযোগ করুন। মোবাইল,ল্যাপটপ,গাড়ি ইত্যাদি । </p>
+                                </div>
+                            </div>
+                            <div class="sm-item-loc sm-item-border mb-20">
+                                <div class="sml-icon mr-20">
+                                    <i class="fal fa-phone-alt"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>আশিক আহাম্মেদ (ম্যানেজার)</span>
+                                    <p><a href="tel:+8801731563645">01731563645</a></p>
+                                    <p style="line-height: 1.7;">যে কোন প্রোডাক্ট বিক্রির জন্য সরাসরি যোগাযোগ করুন। মোবাইল,ল্যাপটপ,গাড়ি ইত্যাদি । </p>
+                                </div>
+                            </div>
+                            <div class="sm-item-loc sm-item-border mb-20">
+                                <div class="sml-icon mr-20">
+                                    <i class="fal fa-phone-alt"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>সাকিল আহাম্মেদ (পরামর্শ দাতা)</span>
+                                    <p><a href="tel:+8801781415020">01781415020</a></p>
+                                    <p style="line-height: 1.7;">যে কোন মোবাইলের কন্ডিশন সম্পর্কে জানতে এবং পরামর্শ নিতে যোগাযোগ করুন। </p>
+                                </div>
+                            </div>
+                            <div class="sm-item-loc sm-item-border mb-20">
+                                <div class="sml-icon mr-20">
+                                    <i class="fal fa-phone-alt"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>ভুবন বিশ্বাস ( অনলাইন ম্যানেজমেন্ট)</span>
+                                    <p><a href="tel:+8801774507992">01774507992</a></p>
+                                    <p style="line-height: 1.7;">যে কোন মোবাইলের কন্ডিশন সম্পর্কে জানতে এবং পরামর্শ নিতে যোগাযোগ করুন। </p>
                                 </div>
                             </div>
                             <div class="sm-item-loc mb-20">
-                                <div class="sml-icon mr-20">
-                                    <i class="fal fa-envelope"></i>
-                                </div>
-                                <div class="sm-content">
-                                    <span>Mail us</span>
-                                    <p><a href="../../../cdn-cgi/l/email-protection.html#6c1f18031e092c0f03011c0d0215420f0301"><span class="__cf_email__" data-cfemail="5221263d203712313d3f22333c2b7c313d3f">[email&#160;protected]</span></a></p>  
+
+                                <div class="sm-content" style="line-height: 1.7;">
+                                    <span>সকল প্রতিনিধি ব্যস্ত থাকলেও যোগাযোগ করে আপনার প্রয়োজন সম্পর্কে জানান।</span>
+
                                 </div>
                             </div>
                         </div>
@@ -90,8 +120,8 @@
         </div>
         <!-- location-area-end -->
 
-       
 
-       
+
+
     </main>
 @endsection

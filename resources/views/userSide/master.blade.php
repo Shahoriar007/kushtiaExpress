@@ -37,6 +37,12 @@
         display: none;
     }
 
+
+    .sm-content p {
+        padding-bottom: 10px; /* Adjust the value as needed */
+    }
+
+
 </style>
 
    </head>
@@ -53,7 +59,7 @@
       <!-- back to top end -->
 
     <!-- header-start -->
-    <header class="header d-blue-bg">
+    <header class="header ">
 
         <div class="header-mid">
             <div class="container">
@@ -168,8 +174,9 @@
                                     <li>
                                         <a href="{{ route('homepage') }}" class="active">Home </i></a>
                                     </li>
-                                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                     <li><a href="{{ route('shop') }}">Products</a></li>
+                                    <li><a href="{{ route('accessory') }}">Accessories</a></li>
+                                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                     <li><a href="{{ route('contactus') }}">Contact Us</a></li>
                                 </ul>
                             </nav>
@@ -226,9 +233,11 @@
                                 <div class="footer__widget-content">
                                     <div class="footer__link">
                                         <ul>
-                                            <li><a href="about.html">ABOUT US</a></li>
-                                            <li><a href="shop.html">PRODUCTS</a></li>
-                                            <li><a href="contact.html">CONTACT US</a></li>
+                                            <li><a href="{{ route('shop') }}">PRODUCTS</a></li>
+                                            <li><a href="{{ route('accessory') }}">ACCESSORIES</a></li>
+                                            <li><a href="{{ route('aboutus') }}">ABOUT US</a></li>
+
+                                            <li><a href="{{ route('contactus') }}">CONTACT US</a></li>
                                         </ul>
                                     </div>
                                 </div>

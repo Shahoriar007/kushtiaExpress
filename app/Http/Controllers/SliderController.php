@@ -44,9 +44,9 @@ class SliderController extends Controller
                 $filename = time() . '_' . $imageFile->getClientOriginalName();
 
                 $image = Image::make($imageFile);
-                $image->resize(800, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
+                // $image->resize(800, null, function ($constraint) {
+                //     $constraint->aspectRatio();
+                // });
                 $image->save(public_path('images/' . $filename));
 
                 $photo = new Photo();

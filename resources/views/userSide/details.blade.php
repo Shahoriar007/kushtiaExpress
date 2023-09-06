@@ -82,8 +82,9 @@
                             </ul>
                         </div>
                         <div class="product-stock mb-20">
-                            @if($detail->availibility == 0)
-                            <h5>Availability: <span>out of stock</span></h5>
+
+                            @if($detail->availability != "1")
+                            <h5>Availability: <span>{{ $detail->availability }}</span></h5>
                             @else
                             <h5>Availability: <span>in stock</span></h5>
                             @endif

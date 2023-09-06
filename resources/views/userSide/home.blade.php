@@ -166,7 +166,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="tel:+8801799702025">
+                    <a href="tel:+8801911550555">
                         <div class="features__item d-flex white-bg">
                             <div class="features__icon mr-20">
                                 <i class="fas fa-phone"></i>
@@ -270,7 +270,7 @@
                                     <h6><a href="product-details.html">Exchange</a></h6>
                                     <p>Laptop, Computer, Smartphone, Gampad</p>
                                     <div class="banner-button mt-20 d-none d-sm-block">
-                                        <a href="tel:+8801799702025" class="st-btn-3 b-radius">Phone</a>
+                                        <a href="tel:+8801911550555" class="st-btn-3 b-radius">Phone</a>
                                         <a href="https://wa.me/+8801234567890" class="st-btn-3 b-radius"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
                                     </div>
@@ -285,7 +285,7 @@
                                             src="{{ asset('frontendUser/assets/img/banner/banner-8.jpg') }}"
                                             alt=""></a>
                                 </div>
-                                <div class="banner__content">
+                                <div class="banner__content banner__content-sd text-center">
                                     <h6><a href="#">Sell</a></h6>
                                     <p>Discount 20% On Products</p>
                                     <div class="banner-button mt-20 d-none d-sm-block">
@@ -316,7 +316,81 @@
     </section>
     <!-- banner__area-end -->
 
+    <!-- topsell__area-start -->
+    <section class="topsell__area-2 pt-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section__head d-flex justify-content-between mb-10">
+                        <div class="section__title">
+                            <h5 class="st-titile">Products</h5>
+                        </div>
+                        <div class="product__nav-tab">
+                            <div class="button-wrap">
+                                <a href="{{ route('shop') }}">See All Product <i class="fal fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-bs-slider">
+                    <div class="product-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            @foreach ($products as $item)
+                                <div class="product__item swiper-slide">
+                                    <div class="product__thumb fix">
+                                        <div class="product-image w-img">
+                                            <a href="{{ route('productDetails', ['id' => $item->id]) }}">
+                                                <img src="{{ asset($item->photos->first()->image_path) }}"
+                                                    alt="product">
+                                            </a>
+                                        </div>
+                                        <div class="product__offer">
+                                            {{-- <span class="discount">-15%</span> --}}
+                                        </div>
+                                        <div class="product-action">
+                                            <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal"
+                                                data-bs-target="#productModalId_{{ $item->id }}">
+                                                <i class="fal fa-eye"></i>
+                                                <i class="fal fa-eye"></i>
+                                            </a>
 
+                                        </div>
+                                    </div>
+                                    <div class="product__content">
+                                        <h6><a
+                                                href="{{ route('productDetails', ['id' => $item->id]) }}">{{ $item->name }}</a>
+                                        </h6>
+
+                                        <div class="price mb-10">
+                                            <span>৳ {{ $item->price }}</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="product__add-cart text-center">
+                                        <a href="{{ route('productDetails', ['id' => $item->id]) }}">
+                                            <button type="button"
+                                                class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                                See details
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="bs-button bs-button-prev"><i class="fal fa-chevron-left"></i></div>
+                    <div class="bs-button bs-button-next"><i class="fal fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- topsell__area-end -->
 
 
 
@@ -397,81 +471,7 @@
     <!-- topsell__area-end -->
 
 
-    <!-- topsell__area-start -->
-    <section class="topsell__area-2 pt-15">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section__head d-flex justify-content-between mb-10">
-                        <div class="section__title">
-                            <h5 class="st-titile">Products</h5>
-                        </div>
-                        <div class="product__nav-tab">
-                            <div class="button-wrap">
-                                <a href="{{ route('shop') }}">See All Product <i class="fal fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="product-bs-slider">
-                    <div class="product-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            @foreach ($products as $item)
-                                <div class="product__item swiper-slide">
-                                    <div class="product__thumb fix">
-                                        <div class="product-image w-img">
-                                            <a href="{{ route('productDetails', ['id' => $item->id]) }}">
-                                                <img src="{{ asset($item->photos->first()->image_path) }}"
-                                                    alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="product__offer">
-                                            {{-- <span class="discount">-15%</span> --}}
-                                        </div>
-                                        <div class="product-action">
-                                            <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal"
-                                                data-bs-target="#productModalId_{{ $item->id }}">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
-                                            </a>
 
-                                        </div>
-                                    </div>
-                                    <div class="product__content">
-                                        <h6><a
-                                                href="{{ route('productDetails', ['id' => $item->id]) }}">{{ $item->name }}</a>
-                                        </h6>
-
-                                        <div class="price mb-10">
-                                            <span>৳ {{ $item->price }}</span>
-                                        </div>
-
-                                    </div>
-                                    <div class="product__add-cart text-center">
-                                        <a href="{{ route('productDetails', ['id' => $item->id]) }}">
-                                            <button type="button"
-                                                class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                See details
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            @endforeach
-
-
-                        </div>
-                    </div>
-                    <!-- If we need navigation buttons -->
-                    <div class="bs-button bs-button-prev"><i class="fal fa-chevron-left"></i></div>
-                    <div class="bs-button bs-button-next"><i class="fal fa-chevron-right"></i></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- topsell__area-end -->
 
     <!-- featured-start -->
     <section class="featured light-bg1 pt-55 pb-40">
