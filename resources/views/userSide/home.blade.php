@@ -153,7 +153,7 @@
         <div class="container">
             <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-4 row-cols-md-4 row-cols-sm-4 row-cols-4 gx-0">
                 <div class="col">
-                    <a href="https://api.whatsapp.com/send?phone=8801799702025" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=8801911550555" target="_blank">
 
                         <div class="features__item d-flex white-bg">
                             <div class="features__icon mr-20">
@@ -174,7 +174,7 @@
                             </div>
                             <div class="features__content">
                                 <h6>Buy Now</h6>
-                                <p>01799702025</p>
+                                <p>01911550555</p>
                             </div>
                         </div>
                     </a>
