@@ -175,13 +175,16 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="{{ route('homepage') }}" class="active">Home </i></a>
+                                        <a href="{{ route('homepage') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
                                     </li>
-                                    <li><a href="{{ route('shop') }}">Products</a></li>
-                                    <li><a href="{{ route('accessory') }}">Accessories</a></li>
-                                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>
+                                    <li>
+                                        <a href="{{ route('shop') }}" class="{{ request()->is('shop*') ? 'active' : '' }}">Products</a>
+                                    </li>
+                                    <li><a href="{{ route('accessory') }}" class="{{ request()->is('accessory*') ? 'active' : '' }}">Accessories</a></li>
+                                    <li><a href="{{ route('aboutus') }}" class="{{ request()->is('about*') ? 'active' : '' }}">About Us</a></li>
+                                    <li><a href="{{ route('contactus') }}" class="{{ request()->is('contact*') ? 'active' : '' }}">Contact Us</a></li>
                                 </ul>
+
                             </nav>
                         </div>
                       </div>
