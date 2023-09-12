@@ -2289,7 +2289,7 @@ input {
 }
 
 .cat-toggle-btn-1 {
-  
+
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -2419,9 +2419,34 @@ input {
 /*----------------------------------------*/
 /* 11. slider CSS
 /*----------------------------------------*/
+
+/* Default styles for the slider container */
 .slider-height {
-  min-height: 500px;
+    min-height: 500px; /* Desktop min-height */
 }
+
+/* Media query for mobile screens (adjust the max-width as needed) */
+@media (max-width: 1719px) {
+    /* Default styles for the slider container */
+    .slider-height {
+        min-height: 35vh; /* Set min-height to 50% of the viewport height for mobile screens */
+    }
+
+    .single-slider img{
+        width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image covers the entire container */
+      }
+
+}
+
+
+
+
+
+
+
+
 
 .slider-height-2 {
   min-height: 430px;
@@ -6953,4 +6978,18 @@ p.checkout-coupon input[type=text]::placeholder {
     width: 690px !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -43,6 +43,9 @@
     }
 
 
+
+
+
 </style>
 
    </head>
@@ -68,7 +71,7 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
                             <div class="header__info">
                                 <div class="logo">
-                                    <a href="index.html" class="logo-image"><img src="{{ asset('frontendUser/assets/img/logo/Kushtia express 3d logo.png') }}"  alt="logo"></a>
+                                    <a href="{{ route('homepage') }}" class="logo-image"><img src="{{ asset('frontendUser/assets/img/logo/logoV2.png') }}"  alt="logo"></a>
                                 </div>
                             </div>
                         </div>
