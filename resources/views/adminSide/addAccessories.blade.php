@@ -62,20 +62,39 @@
 
                                 </div>
 
+                                <div class="form-group mb-0 row">
+                                    <label class="col-form-label col-md-2">Input Video link</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
 
+                                            <input type="text" name="link" id="link" class="form-control"
+                                                placeholder="Video Link" aria-label="link" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
 
-
-
+                                </div>
 
                                 <div class="form-group mb-0 row">
 
                                     <label class="col-form-label col-md-2">Input Accessory price</label>
                                     <div class="col-md-10">
                                         <div class="input-group mb-3">
-                                            <input type="number" name="price" id="price" class="form-control"
+                                            <input type="number" name="price" id="price" class="form-control" placeholder="price"
                                                 aria-label="price" multiple>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="form-group mb-0 row">
+                                    <label class="col-form-label col-md-2">Input Accessory Offer Price</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+
+                                            <input type="number" name="offer_price" id="offer_price" class="form-control"
+                                                placeholder="offer price" aria-label="offer_price" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
                                 </div>
 
 

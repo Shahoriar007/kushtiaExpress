@@ -48,6 +48,8 @@
                                     <th>Name</th>
                                     <th>Brand</th>
                                     <th>Price</th>
+                                    <th>Offer Price</th>
+                                    <th>Link</th>
                                     <th>Availability</th>
                                     <th>Action</th>
                                 </tr>
@@ -69,6 +71,18 @@
                                         <td>{{ $item->brand->brandName }}</td>
                                         <td>{{ $item->price }}</td>
 
+                                        @if ($item->offer_price)
+                                        <td>{{ $item->offer_price }}</td>
+                                        @else
+                                        <td>N/A</td>
+                                        @endif
+
+                                        @if ($item->link)
+                                        <td><a href="{{ $item->link }}">Youtube</a></td>
+                                        @else
+                                        <td>N/A</td>
+                                        @endif
+
                                         @if($item->availability == 1)
                                         <td>Available</td>
                                         @else
@@ -77,11 +91,11 @@
 
                                         <td>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                            {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                             <img src="{{asset('frontendAdmin/assets/img/icons/edit.svg')}}" alt="img">
-                                            </button>
+                                            </button> --}}
 
-                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="update_product_lebel" aria-hidden="true">
+                                            {{-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="update_product_lebel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -159,7 +173,7 @@
 
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
 
                                             <!-- Modal -->
 

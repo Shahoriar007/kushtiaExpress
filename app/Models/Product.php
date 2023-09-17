@@ -3,8 +3,10 @@
 namespace App\Models;
 
 use App\Models\Brand;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Photo;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
@@ -21,6 +23,8 @@ class Product extends Model
         'is_new',
         'pre_owned',
         'top_featured',
+        'offer_price',
+        'link'
 
     ];
 

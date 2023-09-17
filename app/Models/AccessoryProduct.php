@@ -15,6 +15,8 @@ class AccessoryProduct extends Model
         'availability',
         'description',
         'bullet_point',
+        'offer_price',
+        'link'
     ];
 
     public function photos(){

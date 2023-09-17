@@ -294,7 +294,7 @@
                                     </div>
                                     <div class="product__modal-form">
                                         <div class="product__modal-form">
-                                            <a href="https://wa.me/+8801234567890" class=" st-btn-3 b-radius" style="background-color: #F9D70B"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                            <a href="https://wa.me/+8801911550555" class=" st-btn-3 b-radius" style="background-color: #F9D70B"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
                                         </div>
                                     </div>

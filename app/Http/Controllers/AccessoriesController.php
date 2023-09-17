@@ -42,6 +42,7 @@ class AccessoriesController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string',
             'price' => 'required|numeric',
+            'offer_price' => 'required|numeric',
             'availability' => 'required|in:1,0',
             'description' => 'nullable|string',
             'bullet_point' => 'nullable|string',
@@ -50,6 +51,7 @@ class AccessoriesController extends Controller
             'photo3' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo4' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo5' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'link' => 'nullable|url'
 
         ]);
 
@@ -57,9 +59,11 @@ class AccessoriesController extends Controller
         $accessory = new AccessoryProduct();
         $accessory->name = $validatedData['name'];
         $accessory->price = $validatedData['price'];
+        $accessory->offer_price = $request['offer_price'];
         $accessory->availability = $validatedData['availability'];
         $accessory->description = $validatedData['description'];
         $accessory->bullet_point = $validatedData['bullet_point'];
+        $accessory->link = $request['link'];
 
         // Save the accessory
         $accessory->save();

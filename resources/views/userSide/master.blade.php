@@ -115,7 +115,7 @@
 
                                             </li>
                                             <li>
-                                                <a href="shop.html">Products <i class="far fa-angle-down"></i></a>
+                                                <a href="{{ route('shop') }}">Products <i class="far fa-angle-down"></i></a>
                                                 <ul class="mega-menu mega-menu-2">
                                                     <li><a href="#">Categories</a>
                                                         <ul class="mega-item">
@@ -210,20 +210,20 @@
                                     <h4>About The Store</h4>
                                 </div>
                                 <div class="footer__widget-content">
-                                    <p class="footer-text mb-35">Our mission statement is to provide the absolute best customer experience available in the Electronic industry without exception.</p>
+                                    <p class="footer-text mb-35">EXCHANGER provide Best Quality SmartPhones In Bangladesh. Join Our Facebook Page and Group For Regular Update. We Are In Kushtia City and Giving Service All Over Bangladesh. EXCHANGER Let's Make a Perfect Deal!</p>
                                     <div class="footer__hotline d-flex align-items-center mb-10">
                                         <div class="icon mr-15">
                                             <i class="fal fa-headset"></i>
                                         </div>
                                         <div class="text">
-                                            <h4>Got Question? Call us 24/7!</h4>
-                                            <span><a href="tel:100-123-456-7890">+8801756382826</a></span>
+                                            <h4>Got Question ? Call Us 10am To 10pm</h4>
+                                            <span><a href="tel:+8801911550555">+8801911550555</a></span>
                                         </div>
                                     </div>
                                     <div class="footer__info">
                                         <ul>
                                             <li>
-                                                <span>Add:  <a target="_blank" href="https://goo.gl/maps/c82DDZ8ALvL878Bv8">Walls Street 68, Mahattan, Kustia</a></span>
+                                                <span>Address: <a target="_blank" href=""> Chowdhury Market, Mojompur , Kushtia.</a></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -257,9 +257,9 @@
                                     <p>We make consolidating, marketing and tracking your social media website easy.</p>
                                     <div class="cta-social">
                                         <div class="social-icon">
-                                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-                                            <a href="#" class="linkedin"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://www.facebook.com/exchanger.com.bd?mibextid=ZbWKwL" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="https://youtube.com/@EXCHANGER-BD?si=76y_q3IUhZzDaQ7A" class="youtube"><i class="fab fa-youtube"></i></a>
+                                            <a href="https://instagram.com/exchanger.com.bd?igshid=NTc4MTIwNjQ2YQ==" class="instagram"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>

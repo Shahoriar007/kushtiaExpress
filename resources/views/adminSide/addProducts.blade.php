@@ -56,6 +56,18 @@
                                 </div>
 
                                 <div class="form-group mb-0 row">
+                                    <label class="col-form-label col-md-2">Input Product Offer Price</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+
+                                            <input type="number" name="offer_price" id="offer_price" class="form-control"
+                                                placeholder="offer price" aria-label="offer_price" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group mb-0 row">
 
                                     <label class="col-form-label col-md-2">Select Category</label>
                                     <div class="col-md-10">
@@ -107,7 +119,17 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group mb-0 row">
+                                        <label class="col-form-label col-md-2">Input Video link</label>
+                                        <div class="col-md-10">
+                                            <div class="input-group mb-3">
 
+                                                <input type="text" name="link" id="link" class="form-control"
+                                                    placeholder="Video Link" aria-label="link" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+
+                                    </div>
 
 
 
@@ -176,7 +198,7 @@
 
                                     <div class="form-group mb-0 row">
 
-                                        <label class="col-form-label col-md-2">Top Featured</label>
+                                        <label class="col-form-label col-md-2">Top Selling</label>
                                         <div class="col-md-10">
                                             <div class="input-group mb-3">
                                                 <select name="top_featured" id="top_featured">

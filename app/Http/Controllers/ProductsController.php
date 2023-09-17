@@ -50,7 +50,8 @@ class ProductsController extends Controller
         // Validate the form data
         $validatedData = $request->validate([
             'name' => 'required|string',
-            'price' => 'required',
+            'price' => 'required|numeric',
+            'offer_price' => 'required|numeric',
             'category_id' => 'required',
             'brand_id' => 'required',
             'availability' => 'required',
@@ -63,8 +64,8 @@ class ProductsController extends Controller
             'photo2' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo3' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
             'photo4' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
-
             'photo5' => 'image|mimes:jpeg,png,jpg,gif|max:10240',
+            'link' => 'nullable|url'
 
 
         ]);
@@ -72,6 +73,7 @@ class ProductsController extends Controller
          $product = new Product();
          $product->name = $request['name'];
          $product->price = $request['price'];
+         $product->offer_price = $request['offer_price'];
          $product->category_id = $request['category_id'];
          $product->brand_id = $request['brand_id'];
          $product->availability = $request['availability'];
@@ -80,6 +82,7 @@ class ProductsController extends Controller
          $product->is_new = $request['is_new'];
          $product->pre_owned = $request['pre_owned'];
          $product->top_featured = $request['top_featured'];
+         $product->link = $request['link'];
 
 
           // Save the accessory

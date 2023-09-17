@@ -87,6 +87,8 @@
                                     </th>
                                     <th>Name</th>
                                     <th>Price</th>
+                                    <th>Offer Price</th>
+                                    <th>Link</th>
                                     <th>Availability</th>
                                     <th>Action</th>
                                 </tr>
@@ -105,6 +107,18 @@
                                         {{-- <td class="productimgname">a</td> --}}
                                         <td><a href="#">{{ $item->name }}</a></td>
                                         <td>{{ $item->price }}</td>
+
+                                        @if ($item->offer_price)
+                                        <td>{{ $item->offer_price }}</td>
+                                        @else
+                                        <td>N/A</td>
+                                        @endif
+
+                                        @if ($item->link)
+                                        <td><a href="{{ $item->link }}">Youtube</a></td>
+                                        @else
+                                        <td>N/A</td>
+                                        @endif
 
                                         @if ($item->availability == 1)
                                             <td>Available</td>

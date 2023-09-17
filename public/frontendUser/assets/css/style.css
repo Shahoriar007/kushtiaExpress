@@ -594,6 +594,23 @@ input {
   color: #222;
 }
 
+.cart-btn-youtube {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 30px;
+    background-color: #fc0028;
+    color: #222;
+    display: inline-block;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .cart-btn-youtube:hover {
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    color: #222;
+  }
+
 .cart-btn-3 {
   font-size: 13px;
   font-weight: 500;
@@ -924,6 +941,7 @@ input {
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .section__title h5 {
     font-size: 18px;
+    margin-top: 20px;
   }
 }
 .section__title h5::after {
@@ -1416,7 +1434,7 @@ input {
 }
 
 .side-menu-btn {
-  color: #ffffff;
+  color: #000;
   font-size: 25px;
 }
 

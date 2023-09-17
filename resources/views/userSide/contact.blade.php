@@ -4,7 +4,22 @@
 <title>Contact</title>
 @endsection
 
+
+
+
 @section('content')
+
+@section('placeholder')
+    <!-- preloader start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <img src="{{ asset('frontendUser/assets/img/logo/logoV2.png') }}" alt="Loading..." style="width: 400px; height: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+@endsection
 
 <main>
         <!-- page-banner-area-start -->

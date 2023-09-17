@@ -6,6 +6,18 @@
 
 @section('content')
 
+@section('placeholder')
+    <!-- preloader start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <img src="{{ asset('frontendUser/assets/img/logo/logoV2.png') }}" alt="Loading..." style="width: 400px; height: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+@endsection
+
 <main>
         <!-- page-banner-area-start -->
         <div class="page-banner-area page-banner-height" data-background="assets/img/banner/page-banner-1.jpg">
@@ -15,7 +27,7 @@
                         <div class="page-banner-content text-center">
                             <h3>About Us</h3>
                             <p style="line-height: 1.6; color:black">
-                                EXCHANGER BD মূলত নতুন ও ব্যবহৃত স্মার্টফোন কেনাবেচা ও এক্সচেঞ্জ করে থাকে। এছাড়াও যেকোনো ব্র্যান্ডের প্রিওনড বাইক ও ল্যাপটপও আমাদের কাছে কিনতে অথবা বিক্রি করতে পারবেন । আমরা আমাদের কাস্টমারকে তাদের বাজেটের কথা মাথায় রেখে সর্বোচ্চ ফ্রেশ প্রোডাক্ট দেওয়ার চেষ্টা করি। তাছাড়া যেকোনো নতুন ও ব্যবহৃত ফোন  প্রি-অর্ডার নেওয়ার মাধ্যমে নির্দিষ্ট সময়ের মধ্যে কালেক্ট করে দিই। আর বিক্রির ক্ষেত্রে খুব সহজেই কাস্টমার তার ফোনটি আমাদের শোরুমে সরাসরি নিয়ে এসে অথবা whatsapp এর মাধ্যমে যোগাযোগ করে বিক্রি করতে পারবে।
+                                EXCHANGER BD মূলত নতুন ও ব্যবহৃত স্মার্টফোন কেনাবেচা ও এক্সচেঞ্জ করে থাকে। এছাড়াও যেকোনো ব্র্যান্ডের প্রিওনড বাইক ও ল্যাপটপও আমাদের কাছে কিনতে অথবা বিক্রি করতে পারবেন । আমরা আমাদের কাস্টমারকে তাদের বাজেটের কথা মাথায় রেখে সর্বোচ্চ ফ্রেশ প্রোডাক্ট দেওয়ার চেষ্টা করি। তাছাড়া যেকোনো নতুন ও ব্যবহৃত ফোন  প্রি-অর্ডার নেওয়ার মাধ্যমে নির্দিষ্ট সময়ের মধ্যে কালেক্ট করে দিই। আর বিক্রির ক্ষেত্রে খুব সহজেই কাস্টমার তার ফোনটি আমাদের শোরুমে সরাসরি নিয়ে এসে অথবা WhatsApp এর মাধ্যমে যোগাযোগ করে বিক্রি করতে পারবে।
                             </p>
                             {{-- <div class="page-bottom-btn mt-55">
                                 <a href="shop.html" class="st-btn-4">Discover now</a>
