@@ -24,7 +24,10 @@
     </div>
     <!-- preloader end -->
 @endsection
+<div>
 
+
+</div>
 
 
 
@@ -868,7 +871,6 @@
 
 <script>
     const testimonials = @json($reviews);
-    console.log(testimonials)
 
     let index = 0; // Start with the first testimonial (index 0)
 

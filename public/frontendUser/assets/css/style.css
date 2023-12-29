@@ -1280,19 +1280,7 @@ input {
   width: 100%;
   position: relative;
 }
-.header__search-box::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 160px;
-  height: 45%;
-  width: 1px;
-  background: #E0E0E0;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .header__search-box::before {
     display: none;
@@ -1306,7 +1294,7 @@ input {
   border: 2px solid #ffffff;
   outline: none;
   padding: 0 15px;
-  padding-left: 170px;
+  
   padding-right: 60px;
 }
 @media (max-width: 575px) {

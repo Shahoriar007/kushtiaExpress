@@ -37,6 +37,8 @@ Route::get('/welcome', function () {
 // User Side starts
 // Home
 Route::get('/', [HomeController::class, 'home'])->name('homepage');
+Route::post('/search', [HomeController::class, 'search'])->name('search');
+
 // About us
 Route::get('/about', [HomeController::class, 'about'])->name('aboutus');
 // Contact us
